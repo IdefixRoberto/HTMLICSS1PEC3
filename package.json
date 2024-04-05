@@ -12,6 +12,11 @@
   "devDependencies": {
     "parcel": "2.12.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IdefixRoberto/HTMLICSS1PEC1.git"
+  }
+  ,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.1",
     "abab": "^2.0.6",
