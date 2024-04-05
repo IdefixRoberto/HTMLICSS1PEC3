@@ -1,0 +1,210 @@
+@import "variables";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; }
+  
+  body {
+    display: relative;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: whitesmoke;
+    font-family: "Titillium Web", "Comic Neue", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6; }
+
+    //Media Query
+
+    
+
+
+    a{
+      text-decoration: none;
+    }
+
+    @keyframes animacioText {
+      0%{
+        opacity: 0;
+      }
+      10%{
+        opacity: 0.1;
+      }
+      20%{
+        opacity: 0.2;
+      }
+      30%{
+        opacity: 0.3;
+      }
+      40%{
+        opacity: 0.4;
+      }
+      50%{
+        opacity: 0.5;
+      }
+      60%{
+        opacity: 0.6;
+      }
+      70%{
+        opacity: 0.7;
+      }
+      80%{
+        opacity: 0.8;
+      }
+      90%{
+        opacity: 0.9;
+      }
+      100%{
+        opacity: 0;
+      }
+    }
+
+    @keyframes animacioArcoiris {
+      0% { color: red; }
+      16.67% { color: orange; } /* 1/6 de l'arc de San Marti */
+      33.33% { color: yellow; } /* 2/6 de l'arc de San Marti */
+      50% { color: green; } /* 3/6 de l'arc de San Marti */
+      66.67% { color: blue; } /* 4/6 de l'arc de San Marti */
+      83.33% { color: indigo; } /* 5/6 de l'arc de San Marti */
+      100% { color: violet; } /* 6/6 de l'arc de San Marti */
+    }
+
+    .text-center{
+      text-align: center;
+    }
+
+    .section-tittle{
+      margin-bottom: 3vh;
+    }
+
+
+
+  .rosa{
+    color: lightcoral;
+  }
+  ul,li{
+    list-style: none;
+  }
+
+  .taxat{
+    text-decoration: line-through;
+  }
+
+  .padding__10{
+    margin-top: 10px;
+  }
+
+  .logo{
+    width: 10px;
+  }
+
+  @keyframes creixement {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes rotarImatges {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .border{
+    color: black;
+    text-shadow: -2px -2px 0 white, 
+    -2px -2px 0 white, 
+    2px -2px 0 white, 
+    2px 2px 0 white,
+    2px -2px 0 white;
+  }
+
+  .wave{
+    color: rgb(69, 100, 236);
+    animation: wave 3s ease-in-out infinite;
+  }
+
+  @keyframes wave {
+    0%, 100%{
+      clip-path: polygon(
+        0%, 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        66.67% 50%,
+        84% 45%,
+        100% 46%, 
+        100% 100%,
+        0% 100%
+      );
+    }
+
+    50%{
+      clip-path: polygon(
+        0%, 47%,
+        10% 48%,
+        33% 54%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%, 
+        100% 100%,
+        0% 100%
+      );
+    }
+  }
+
+  h1{
+    margin: 4vh 0;
+    font-size: 3.5rem;
+
+
+    @media (max-width: $tablet){
+      margin: 20px 0;
+      font-size: 2.5rem;
+    }
+    @media (max-width: $tablet){
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+}
+  
+h2{
+  font-size: 2.75rem;
+
+  @media (max-width: $tablet) {
+
+    font-size: 2rem;
+  }
+
+  @media (max-width: $phone) {
+
+    font-size: 1.7rem;
+  }
+}
+//basat en https://barcelonageeks.com/como-crear-un-efecto-de-bola-de-onda-usando-css/
+@keyframes loader {
+  0% {
+    border: 1px solid #fff;
+    background: transparent;
+
+    transform: translateY(0);
+  }
+  50% {
+    border: 1px solid #fff;
+
+
+    transform: translateY(-25px);
+  }
+  100% {
+    border: 1px solid #fff;
+ 
+
+    transform: translateY(0);
+  }
+}

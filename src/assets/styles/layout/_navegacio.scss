@@ -1,0 +1,35 @@
+@import "utility";
+.header{
+   
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr, 2fr;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &__logo{
+            img{
+            width: 10rem;
+            @media (max-width:$tablet) {
+                width: 8rem;
+            }
+            @media (max-width:$phone) {
+                width: 4rem;
+            }
+              }
+        }
+    }
+
+   
+}
+
+.navegacio{
+    a{
+        font-size: 1rem;
+            margin-left: 1rem;
+            @media (max-width:$tablet) {
+                font-size: .8rem;
+            }
+    }
+}

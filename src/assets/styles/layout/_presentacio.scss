@@ -1,0 +1,151 @@
+@import "utility";
+@import "variables";
+@import "home";
+@import "navegacio";
+@import "variables";
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+.presentacio-a {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  margin: 2.5vh 7.5vh;
+  p{
+    margin-top: 2.5vh;
+  }
+}
+
+.presentacio-b {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2.5vh 20px;
+
+  .llista-discs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin: 10px;
+
+      a {
+        text-decoration: none;
+
+        img {
+          width: 250px;
+          height: 250px;
+          border-radius: 50%;
+          transition: opacity 0.5s ease-in-out;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        h3 {
+          margin-top: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.presentacio-d{
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20% 2.5vh 20%;
+  p{
+    margin-top: 2.5vh ;
+    line-height: 1.5;
+  }
+}
+
+.detall-e{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 10vh;
+  p{
+    margin-bottom: 5vh;
+    line-height: 1.5;
+  }
+&__caixes{
+
+  
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5vh;
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);   
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns:  1fr;   
+  }
+
+  &__caixa{
+
+    
+    width: 100%;
+    height: 100%;
+    gap: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5vh auto;
+    background-color: black;
+    transition: 1.5s ease-in-out;
+
+    &__imatge{
+      opacity: 0;
+    }
+
+    &__continguts{
+      opacity: 0;
+    }
+
+    &:hover{
+      background-color: rgb(167, 167, 167);
+     .detall-e__caixes__caixa__imatge{
+        opacity: 1;
+      }
+  
+      .detall-e__caixes__caixa__continguts{
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+
+}
+
+.detall-e__caixes__caixa__imatge{
+  img{
+  max-width: 100%;
+  max-height: 100%;
+  }
+}

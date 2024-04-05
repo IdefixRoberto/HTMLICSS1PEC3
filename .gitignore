@@ -1,0 +1,9 @@
+# Ignorar carpetas generadas por comandos del package.json
+/node_modules
+/dist
+/.cache
+
+# Ignorar archivos generados por comandos del package.json
+*.log
+*.lock
+

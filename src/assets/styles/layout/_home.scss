@@ -1,0 +1,256 @@
+@import "utility";
+@import "variables";
+.portada{
+    width: 100%;
+}
+.fondo_pantalla{
+    background-image: url("../images/portadaPrincipal.jpg");
+    background-size: cover;
+    height:100vh;
+    width: 100%;
+    @media (max-width: $phone) {
+        background-image: none;;
+        height:50vh;
+    }
+}
+.header{
+    max-width: 100%;
+    &__barra{
+    max-width: 100%;
+    
+    &__nav{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    .navegacio{
+        font-size: 2.5vh;
+        padding: .5vh 10vh;
+        margin: 0 30vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-family: $font-family-Comic;
+        a{
+            &:hover{
+                border-bottom: 0.1vh dotted  black;
+            }
+        }
+
+        @media (max-width:$tablet) {
+            font-size: 4rem;
+            margin: 0;
+
+            opacity: 4;
+        }
+
+        @media (max-width:$phone) {
+            font-size: 3.5rem;
+            flex-direction: column;
+        }
+
+        &__link{
+            @media (max-width:$tablet) {
+                font-size: 2rem;
+            }
+    
+            @media (max-width:$phone) {
+                font-size: 2.5rem;
+                flex-direction: column;
+            }
+        }
+    }
+    &__gira{
+        animation: animacioText 7s infinite alternate;
+        font-size: 5vh;
+        margin:0;
+        padding: 0;
+
+        @media (max-width:$phone) {
+            font-size: 0px;
+            width: 0;
+            height: 0;
+        }
+        //Ara faig el efecte arcoiris
+
+        &__1{
+            animation: animacioArcoiris 4s infinite linear;
+        }
+        &__2{
+            animation: animacioArcoiris 4.25s infinite linear;
+        }
+        &__3{
+            animation: animacioArcoiris 4.5s infinite linear;
+        }
+        &__4{
+            animation: animacioArcoiris 4.75s infinite linear;
+        }
+        &__5{
+            animation: animacioArcoiris 5s infinite linear;
+        }
+        &__6{
+            animation: animacioArcoiris 5.25s infinite linear;
+        }
+        &__7{
+            animation: animacioArcoiris 5.5s infinite linear;
+        }
+        &__8{
+            animation: animacioArcoiris 5.75s infinite linear;
+        }
+        &__9{
+            animation: animacioArcoiris 6s infinite linear;
+        }
+        &__10{
+            animation: animacioArcoiris 6.25s infinite linear;
+        }
+        &__11{
+            animation: animacioArcoiris 6.5s infinite linear;
+        }
+        &__12{
+            animation: animacioArcoiris 6.75s infinite linear;
+        }
+        &__13{
+            animation: animacioArcoiris 7s infinite linear;
+        }
+        &__14{
+            animation: animacioArcoiris 7.25s infinite linear;
+        }
+        &__15{
+            animation: animacioArcoiris 7.5s infinite linear;
+        }
+        &__16{
+            animation: animacioArcoiris 7.75s infinite linear;
+        }
+        
+    }
+    }
+    }
+    
+
+}
+
+.home {  
+    // Estils generals per tot el main
+
+    h1{
+        text-align: center;
+        margin-top: 5vh;
+        font-size: 7vh;
+    }
+
+    &__historia__text{
+        padding: 0 20vh;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        line-height: 1.5;
+        text-align: justify;
+        @media (max-width:$tablet) {
+            padding: 0 10vh;
+        }
+        @media (max-width:$phone) {
+            padding: 0 5vh;
+        }
+
+        p{
+            margin: 1.5vh 0 ;
+        }
+    }
+  
+    &__historia, &__videos, &__xarxes {
+      margin-bottom: 5vh; // Espai entre seccions 
+        
+      h2 {
+        font-family: $font-family-Comic;
+        margin-bottom: 5vh;
+        font-size: 5vh;
+      }
+    }
+    
+    
+    &__videos__container { 
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); // Responsive videos 
+        @media (max-width: $phone) {
+            grid-template-columns: 1fr;
+            width: 50%;
+            margin:0 25%;
+            max-width: 300px;
+            
+            .home__videos__container__video{
+                max-width: 300px;
+                max-height: 300px;
+                width: 90%;
+
+            }
+        }
+        
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      align-items: center;
+      gap: 5vh;
+
+  
+      &__video {
+        margin: 2.5vh 0;
+        iframe{
+            border-radius: 10%;
+            width: 60vh;
+            height: 40vh;
+
+            @media (max-width: $tablet) 
+            {
+            width: 40vh;
+            height: 25vh;    
+            }
+        }
+
+       
+      }
+    }
+    &__xarxes, &__historia,&__videos {
+        margin: 2.5vh 0;
+    }
+
+    &__xarxes{
+        
+    &__llista {
+     
+        display: flex; 
+        list-style: none;
+        margin-top: 5vh;
+        justify-content: space-around;
+ 
+        @media (max-width:$phone) {
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+            gap: 5vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        li {
+          margin: 0 5vh; // Espai entre cada icona 
+  
+           // Estils opcionals per a un efecte d'hover
+          img {
+            transition: transform 0.2s ease;
+            max-width: 10vh;
+            max-height: 10vh;
+          }
+  
+          &:hover img {
+            transform: scale(1.1); // Augmenta la mida al fer hover
+          }
+        }
+      }
+    }
+  }
