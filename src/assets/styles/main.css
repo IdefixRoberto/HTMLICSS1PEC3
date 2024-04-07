@@ -2649,7 +2649,6 @@ body {
   color: lightsalmon; }
 
 .detall__concerts__concert__enlace {
-  display: grid;
   justify-content: center;
   text-align: center;
   align-items: center;

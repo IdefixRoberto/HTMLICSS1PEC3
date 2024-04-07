@@ -7,6 +7,8 @@
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
+    "dev": "parcel watch index.html",
+    "clean": "rimraf dist .parcel-cache",
     "sass": "node-sass -w src/assets/styles -o src/assets/styles --recursive"
   },
   "author": "Salvador Peiró Palmer",
