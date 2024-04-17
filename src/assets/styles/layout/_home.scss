@@ -1,71 +1,36 @@
 @import "utility";
 @import "variables";
 .portada{
-    width: 100%;
+    width: 100vh;
 }
 .fondo_pantalla{
     background-image: url("../images/portadaPrincipal.jpg");
     background-size: cover;
-    height:100vh;
-    width: 100%;
+    background-position: center;
+    
+    
     @media (max-width: $phone) {
         background-image: none;;
-        height:50vh;
+        height:20vh;
     }
 }
-.header{
-    max-width: 100%;
-    &__barra{
-    max-width: 100%;
+.headerHome{
     
+    
+    &__barra{
+        height:120vh;
+    margin-top: 10x;
+    padding-top: 20px;
     &__nav{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
     background-size: cover; 
     background-repeat: no-repeat;
-    .navegacio{
-        font-size: 2.5vh;
-        padding: .5vh 10vh;
-        margin: 0 30vh;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        max-width: 100%;
-        display: flex;
-        justify-content: space-between;
-        font-family: $font-family-Comic;
-        a{
-            &:hover{
-                border-bottom: 0.1vh dotted  black;
-            }
-        }
 
-        @media (max-width:$tablet) {
-            font-size: 4rem;
-            margin: 0;
-
-            opacity: 4;
-        }
-
-        @media (max-width:$phone) {
-            font-size: 3.5rem;
-            flex-direction: column;
-        }
-
-        &__link{
-            @media (max-width:$tablet) {
-                font-size: 2rem;
-            }
-    
-            @media (max-width:$phone) {
-                font-size: 2.5rem;
-                flex-direction: column;
-            }
-        }
-    }
     &__gira{
         animation: animacioText 7s infinite alternate;
         font-size: 5vh;
@@ -134,6 +99,49 @@
     
 
 }
+.navegacioHome{
+       
+        
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    
+    justify-content: space-around;
+    font-family: $font-family-Comic;
+    a{
+        font-size: 2.5vh;
+        
+        margin-left: 10vh;
+        &:hover{
+            border-bottom: 0.1vh dotted  black;
+        }
+    }
+
+    @media (max-width:$tablet) {
+        font-size: 4rem;
+        margin: 0;
+
+        opacity: 4;
+    }
+
+    @media (max-width:$phone) {
+        font-size: 3.5rem;
+        flex-direction: column;
+    }
+
+    &__link{
+        @media (max-width:$tablet) {
+            font-size: 2rem;
+        }
+
+        @media (max-width:$phone) {
+            font-size: 2.5rem;
+            flex-direction: column;
+        }
+    }
+}
+
 
 .home {  
     // Estils generals per tot el main
@@ -145,17 +153,17 @@
     }
 
     &__historia__text{
-        padding: 0 20vh;
+        padding: 0 20%;
         justify-content: center;
         align-items: center;
         display: grid;
         line-height: 1.5;
         text-align: justify;
         @media (max-width:$tablet) {
-            padding: 0 10vh;
+            padding: 0 10%;
         }
         @media (max-width:$phone) {
-            padding: 0 5vh;
+            padding: 0 5%;
         }
 
         p{
@@ -176,7 +184,9 @@
     
     &__videos__container { 
       display: grid;
+      margin: 0 5%;
       grid-template-columns: repeat(2, 1fr); // Responsive videos 
+      
         @media (max-width: $phone) {
             grid-template-columns: 1fr;
             width: 50%;
@@ -196,15 +206,15 @@
       margin-right: auto;
       justify-content: center;
       align-items: center;
-      gap: 5vh;
+      gap: 10vh;
 
   
       &__video {
         margin: 2.5vh 0;
         iframe{
             border-radius: 10%;
-            width: 60vh;
-            height: 40vh;
+            width: 45vh;
+            height: 35vh;
 
             @media (max-width: $tablet) 
             {
@@ -222,12 +232,14 @@
 
     &__xarxes{
         
+        
     &__llista {
      
         display: flex; 
         list-style: none;
-        margin-top: 5vh;
+        margin: 5vh 20%;
         justify-content: space-around;
+       
  
         @media (max-width:$phone) {
             display: grid;
@@ -238,13 +250,11 @@
             text-align: center;
         }
         li {
-          margin: 0 5vh; // Espai entre cada icona 
-  
-           // Estils opcionals per a un efecte d'hover
+          
           img {
             transition: transform 0.2s ease;
-            max-width: 10vh;
-            max-height: 10vh;
+            max-width: 7vh;
+            max-height: 7vh;
           }
   
           &:hover img {

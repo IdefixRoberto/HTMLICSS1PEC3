@@ -4,7 +4,7 @@
 
 .enlaces-a{
     margin:  0 auto;
-    width: 40%;
+    width: 60%;
     p{
         line-height: 1.5rem;
         margin-bottom: 1rem;
@@ -50,5 +50,119 @@
         p{
             margin-left: 3vh;
         }
+    }
+}
+
+.enlaces-c {
+    width: 60%;
+    margin: 2rem 20%;
+    .text-center {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+  
+      .enlaces-c__llistat {
+        list-style-type: none;
+        padding-left: 0;
+  
+        li {
+          background-color: #dfdfdfeb;
+          margin-bottom: 15px;
+          padding: 15px;
+          border-radius: 8px;
+          border-left: 5px solid #398a3c;
+  
+          a {
+            color: #026ad9;
+            text-decoration: none;
+  
+            &:hover {
+              text-decoration: underline;
+              color: #ea3d94;
+            }
+          }
+        }
+      }
+    }
+  }
+
+.enlaces-d {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &__paragraf{
+        margin: 1% 20%;
+        text-align: justify;
+    }
+    &__container {
+      &__llista {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex; // per defecte en desktop
+        gap: 30px;
+
+        @media (max-width: $tablet) { // tablet
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+
+        @media (max-width: $phone) { // telèfon
+          grid-template-columns: repeat(1, 1fr);
+          gap: 10px;
+        }
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease;
+
+        &.enlaces-d__item--discord i:hover {
+          color: #7289da; // color Discord
+        }
+        &.enlaces-d__item--youtube i:hover {
+          color: #FF0000; // color YouTube
+        }
+        &.enlaces-d__item--x i:hover {
+          color: #007BFF; // color genèric blau
+        }
+        &.enlaces-d__item--instagram i:hover {
+          color: #E1306C; // color Instagram
+        }
+        &.enlaces-d__item--facebook i:hover {
+          color: #3B5998; // color Facebook
+        }
+
+        &:hover {
+          transform: scale(1.2);
+          p{
+            
+                transform: scale(1.2);
+              
+          }
+
+        }
+
+        i {
+          font-size: 3rem; // ajustat per a que correspongui a la classe `fa-3x`
+          margin-bottom: 10px;
+        }
+
+        p {
+          margin: 0; 
+ 
+        }
+      }
     }
 }

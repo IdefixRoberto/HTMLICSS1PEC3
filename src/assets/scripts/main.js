@@ -27,3 +27,4 @@ emailInput.addEventListener('change', updateButtonState);
 // Execute la validacio
 updateButtonState(); 
 
+console.log("Hola funciona")

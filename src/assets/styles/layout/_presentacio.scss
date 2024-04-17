@@ -65,87 +65,112 @@ body {
 }
 
 .presentacio-d{
-  display: grid;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 0 20% 2.5vh 20%;
+  width: auto
+
   p{
-    margin-top: 2.5vh ;
+    margin: 5.5vh 0;
     line-height: 1.5;
+    font-size: 1.1rem;
+  }
+  a{
+    font-size: 2.1rem;
+  }
+
+  &__carrousel {
+    display: flex;
+    overflow: hidden; // Evita que es visualitze el desbordament
+    min-width: auto;
+    height: auto; // Altura fija de la caja del carrusel
+    text-align: center;
+
+    &__lletra {
+      display: flex;
+      max-width: 100%;
+      display: block;
+      text-align: center;
+
+      pre {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        height: 100%; // La altura se ajusta al contenedor padre
+        animation: scrollText 32s linear infinite;
+        text-align: center;
+      }
+    }
   }
 }
 
-.detall-e{
+.presentacio-e {
   display: grid;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 0 10vh;
-  p{
-    margin-bottom: 5vh;
+
+  &__text {
+    margin-bottom: 3vh;
     line-height: 1.5;
-  }
-&__caixes{
-
-  
-  display: grid;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5vh;
-  @media (max-width: $tablet) {
-    grid-template-columns: repeat(2, 1fr);   
+    font-size: 1.2rem;
   }
 
-  @media (max-width: $tablet) {
-    grid-template-columns:  1fr;   
-  }
-
-  &__caixa{
-
-    
-    width: 100%;
-    height: 100%;
-    gap: 100px;
-    display: flex;
-    flex-direction: column;
+  &__caixes {
+    display: grid;
     justify-content: center;
-    align-items: center;
     text-align: center;
-    margin: 5vh auto;
-    background-color: black;
-    transition: 1.5s ease-in-out;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vh;
 
-    &__imatge{
-      opacity: 0;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr); // 2 caixes en vista de tablet
     }
 
-    &__continguts{
-      opacity: 0;
+    @media (max-width: $phone) {
+      grid-template-columns: 1fr; // 1 caixa en vista de mòbil
     }
 
-    &:hover{
-      background-color: rgb(167, 167, 167);
-     .detall-e__caixes__caixa__imatge{
-        opacity: 1;
+    &__caixa {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 5vh auto;
+      background-color: black;
+      transition: 1.5s ease-in-out;
+      &__imatge {
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
       }
-  
-      .detall-e__caixes__caixa__continguts{
-        opacity: 1;
+
+      @media (max-width: $tablet) {
+        background-color: rgb(167, 167, 167); // Fons més clar per a millor visibilitat
+        &__imatge, &__continguts {
+          
+        }
+      }
+
+      &:hover {
+        background-color: rgb(167, 167, 167);
+
+        .presentacio-e__caixes__caixa__imatge,
+        .presentacio-e__caixes__caixa__continguts {
+          
+        }
       }
     }
   }
-
 }
 
 
-}
-
-.detall-e__caixes__caixa__imatge{
-  img{
-  max-width: 100%;
-  max-height: 100%;
-  }
-}
