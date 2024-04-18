@@ -1,9 +1,11 @@
-# Ignorar carpetas generadas por comandos del package.json
+# Ignorar carpetes generades per del package.json
 /node_modules
 /dist
 /.cache
 
-# Ignorar archivos generados por comandos del package.json
+# Ignorar archivos generats per package.json
 *.log
 *.lock
 
+# Ignorar archivos generats per parcel
+.parcel-cache/
