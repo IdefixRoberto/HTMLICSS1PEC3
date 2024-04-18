@@ -1,7 +1,7 @@
 {
   "name": "pec1",
   "version": "1.0.0",
-  "description": "Projecte  HTML i CSS",
+  "description": "Projecte HTML i CSS",
   "source": "src/index.html",
   "browserslist": [
     "last 2 versions",
@@ -9,17 +9,17 @@
     "not dead"
   ],
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build",
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html --dist-dir dist",
     "dev": "parcel src/index.html --open",
     "clean": "rimraf dist .parcel-cache",
     "lint": "eslint src/**/*.js",
+    "prebuild": "rimraf .parcel-cache dist",
     "sass": "node-sass -w src/assets/styles -o src/assets/styles --recursive"
   },
   "author": "Salvador Peiró Palmer",
   "license": "ISC",
   "devDependencies": {
- 
     "sass": "^1.32.8",
     "@parcel/transformer-sass": "^2.11.0",
     "autoprefixer": "^10.4.15",
@@ -29,7 +29,8 @@
     "postcss-preset-env": "^9.1.1",
     "posthtml-include": "^1.7.4",
     "rimraf": "^5.0.1",
-    "sharp": "^0.31.1"
+    "sharp": "^0.31.1",
+    "eslint": "^8.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2"
@@ -43,5 +44,9 @@
       "root": "./src"
     }
   },
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "main": "index.js"
 }
+
