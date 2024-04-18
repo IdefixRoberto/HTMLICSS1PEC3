@@ -14,7 +14,7 @@
     "dev": "parcel src/index.html --open",
     "clean": "rimraf dist .parcel-cache",
     "lint": "eslint src/**/*.js",
-    "prebuild": "rimraf .parcel-cache dist",
+    "prebuild": "rimraf dist .parcel-cache",
     "sass": "node-sass -w src/assets/styles -o src/assets/styles --recursive"
   },
   "author": "Salvador Peiró Palmer",
@@ -49,4 +49,3 @@
   },
   "main": "index.js"
 }
-
