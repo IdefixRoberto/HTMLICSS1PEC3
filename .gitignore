@@ -2,7 +2,7 @@
 /node_modules
 /dist
 /.cache
-
+.env
 # Ignorar archivos generats per package.json
 *.log
 *.lock
