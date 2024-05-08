@@ -3,11 +3,6 @@
 @import "home";
 @import "navegacio";
 
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
 .container {
   max-width: 1000px;
@@ -74,7 +69,7 @@ body {
       text-align: center;
       color: whitesmoke;
       max-width: 80vh;
-      max-height: 80vh;
+      max-height: auto;
       //Seleccione els de les fotos amb nth:child
       &:nth-child(1){
         background-color: lightcoral;
@@ -85,14 +80,14 @@ body {
 
       };
       &:nth-child(2) {
-        background-image: url("/src/assets/images/galeria4.jpg");
+        background-image: url("/src/assets/images/galeria4.webp");
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
     }
     
     &:nth-child(3) {
-        background-image: url("/src/assets/images/portadaPrincipal.jpg");
+        background-image: url("/src/assets/images/portadaPrincipal.webp");
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -129,6 +124,14 @@ body {
   }
   }
 }
+
+
+
+
+
+
+
+
 
 .concert {
   display: flex;
@@ -179,14 +182,14 @@ body {
 
   .concert-image {
     width: 40%; 
-    height: 250px; 
+    height: auto; 
     object-fit: cover; 
     transform: rotate(-5deg); /* Inclinació */
     margin: 0 20px;
     @media (max-width: $tablet) {
       transform: rotate(0); 
-      width: 100%; 
-      height: 100%; 
+      width: 90vw; 
+      height: auto; 
   
     }
   }
@@ -270,7 +273,9 @@ margin-top: 100px ;
     text-align: center;
   
     img{
-      
+      width: 100%;
+      height: auto;
+      max-height: 40vh;   
     }
   
     &__content{
@@ -376,13 +381,13 @@ margin-top: 100px ;
     width: 20rem;
     height: 20rem;
     @media (max-width: $tablet) {
-      width: 10rem;
-      height: 10rem;
+      width: 80vw;
+      height: auto;
     }
 
     @media (max-width: $phone) {
-      width: 5rem;
-      height: 5rem;
+      width: 70vw;
+      height: auto;
       
     }
   }
@@ -411,7 +416,7 @@ margin-top: 100px ;
   &__ul{
     display: flex;
 
-    @media (max-width: $phone) {
+    @media (max-width: $tablet) {
       flex-direction: column;
       li{
         margin: 0 5px;
@@ -421,12 +426,11 @@ margin-top: 100px ;
     li{
       margin-left: 16px;
       img{
-        max-width: 400px;
-        max-height: 400px;
+        width: 25vw;
+        height: auto;
         @media (max-width: $tablet){
-        max-width: 300px;
-        max-height: 300px;
-        margin-top: 15px;
+        width: 60vw;
+        
         }
       }
     }
@@ -496,11 +500,11 @@ margin-top: 100px ;
       .detall-f__div__Portada__iframe{
         opacity: 1;
         z-index: 12;
-        transform: scale(100%);
+        transform: scale(1.05);
         max-width: 300px;
         max-height: 300px;
         width: 100%;
-        height: 100%;
+        height: auto;
       }
 
 
@@ -543,6 +547,7 @@ margin-top: 100px ;
       &__imatge {
         z-index: 4;
         max-width: 40vh;
+        height: auto;
         max-height: 40vh;
         transform: scale(3);
         transition: transform .5s ease;
@@ -557,6 +562,7 @@ margin-top: 100px ;
         max-width: 20vh;
         max-height: 20vh;
         opacity: 0;
+        background-color: transparent;
         animation: rotarImatges 5s infinite linear; 
         transform-origin: center;
       }
@@ -569,6 +575,7 @@ margin-top: 100px ;
     @media (max-width: $tablet) {
       z-index: 12;
       width: 80%;
+      height: auto;
       max-height: 80%;
       transform: scale(110%);
       transition: transform .5s ease;
@@ -603,4 +610,15 @@ margin-top: 100px ;
     }
   }
 }
+
+.imatgeDestacada {
+  width: 100%;
+  height: auto;
+  img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+}
+
 

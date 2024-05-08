@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: justify;
-  margin: 2.5vh 7.5vh;
+  margin: 5vh 15vw;
   p{
     margin-top: 2.5vh;
   }
@@ -36,7 +36,8 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-
+    display: flex;
+    justify-content: space-between;
     li {
       display: inline-block;
       margin: 10px;
@@ -45,11 +46,12 @@ body {
         text-decoration: none;
 
         img {
-          width: 250px;
-          height: 250px;
+          width: 100%;
+          max-width: 20vw;
+          height: auto;
           border-radius: 50%;
           transition: opacity 0.5s ease-in-out;
-
+          opacity: 0.7;
           &:hover {
             opacity: 1;
           }
@@ -70,8 +72,9 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
-  width: auto
-
+  width: auto;
+  overflow: hidden;
+  height: 600px;
   p{
     margin: 5.5vh 0;
     line-height: 1.5;
@@ -85,7 +88,7 @@ body {
     display: flex;
     overflow: hidden; // Evita que es visualitze el desbordament
     min-width: auto;
-    height: auto; // Altura fija de la caja del carrusel
+    height: 1200px;
     text-align: center;
 
     &__lletra {
@@ -149,8 +152,8 @@ body {
       transition: 1.5s ease-in-out;
       &__imatge {
         img {
-          max-width: 100%;
-          max-height: 100%;
+          width: 100%;
+          height: auto;
         }
       }
 
@@ -174,3 +177,55 @@ body {
 }
 
 
+/*  Animació SVG*/
+
+
+
+        @keyframes transformToHeart {
+            0% {
+                /* Inici amb un quadrat i dos cercles en blau */
+                fill: blue;
+                opacity: 1;
+            }
+            50% {
+                /* Els cercles es mouen per sobre del quadrat i tots canvien a vermell */
+                transform: translate(0, -20px);
+                fill: red;
+                opacity: 1;
+            }
+            100% {
+                /* Comencen a desaparèixer */
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeInHeart {
+            0% { 
+                fill: red;
+                opacity: 0; 
+            }
+            100% { 
+                opacity: 1; 
+            }
+        }
+
+        #square, .circle {
+            animation: transformToHeart 3s forwards;
+        }
+
+        #heart {
+            opacity: 0;
+            animation: fadeInHeart 3s forwards;
+            animation-delay: 2s; /* Esperem que les altres formes comencin a desaparèixer */
+        }
+
+        .presentacio-a__title{
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          
+          h2{
+            margin: 0 2.6vw;
+          }
+          
+        }

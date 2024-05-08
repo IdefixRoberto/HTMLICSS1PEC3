@@ -1,145 +1,10 @@
 @import "utility";
 @import "variables";
-.portada{
-    width: 100vh;
-}
-.fondo_pantalla{
-    background-image: url("../images/portadaPrincipal.jpg");
-    background-size: cover;
-    background-position: center;
-    
-    
-    @media (max-width: $phone) {
-        background-image: none;;
-        height:20vh;
-    }
-}
-.headerHome{
-    
-    
-    &__barra{
-        height:120vh;
-    margin-top: 10x;
-    padding-top: 20px;
-    &__nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    background-size: cover; 
-    background-repeat: no-repeat;
 
-    &__gira{
-        animation: animacioText 7s infinite alternate;
-        font-size: 5vh;
-        margin:0;
-        padding: 0;
 
-        @media (max-width:$phone) {
-            font-size: 0px;
-            width: 0;
-            height: 0;
-        }
-        //Ara faig el efecte arcoiris
-
-        &__1{
-            animation: animacioArcoiris 4s infinite linear;
-        }
-        &__2{
-            animation: animacioArcoiris 4.25s infinite linear;
-        }
-        &__3{
-            animation: animacioArcoiris 4.5s infinite linear;
-        }
-        &__4{
-            animation: animacioArcoiris 4.75s infinite linear;
-        }
-        &__5{
-            animation: animacioArcoiris 5s infinite linear;
-        }
-        &__6{
-            animation: animacioArcoiris 5.25s infinite linear;
-        }
-        &__7{
-            animation: animacioArcoiris 5.5s infinite linear;
-        }
-        &__8{
-            animation: animacioArcoiris 5.75s infinite linear;
-        }
-        &__9{
-            animation: animacioArcoiris 6s infinite linear;
-        }
-        &__10{
-            animation: animacioArcoiris 6.25s infinite linear;
-        }
-        &__11{
-            animation: animacioArcoiris 6.5s infinite linear;
-        }
-        &__12{
-            animation: animacioArcoiris 6.75s infinite linear;
-        }
-        &__13{
-            animation: animacioArcoiris 7s infinite linear;
-        }
-        &__14{
-            animation: animacioArcoiris 7.25s infinite linear;
-        }
-        &__15{
-            animation: animacioArcoiris 7.5s infinite linear;
-        }
-        &__16{
-            animation: animacioArcoiris 7.75s infinite linear;
-        }
-        
-    }
-    }
-    }
-    
-
-}
-.navegacioHome{
-       
-        
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    max-width: 100%;
-    
-    justify-content: space-around;
-    font-family: $font-family-Comic;
-    a{
-        font-size: 2.5vh;
-        
-        margin-left: 10vh;
-        &:hover{
-            border-bottom: 0.1vh dotted  black;
-        }
-    }
-
-    @media (max-width:$tablet) {
-        font-size: 4rem;
-        margin: 0;
-
-        opacity: 4;
-    }
-
-    @media (max-width:$phone) {
-        font-size: 3.5rem;
-        flex-direction: column;
-    }
-
-    &__link{
-        @media (max-width:$tablet) {
-            font-size: 2rem;
-        }
-
-        @media (max-width:$phone) {
-            font-size: 2.5rem;
-            flex-direction: column;
-        }
-    }
+.home-imatge .text__gira .h1__home {
+    font-size: calc(5.5vw );
+    margin-top: 3%;
 }
 
 
@@ -252,9 +117,10 @@
         li {
           
           img {
+            width: 100%;
+            max-width: 7.5vw; 
+            height: auto; 
             transition: transform 0.2s ease;
-            max-width: 7vh;
-            max-height: 7vh;
           }
   
           &:hover img {
@@ -263,4 +129,158 @@
         }
       }
     }
+  }
+
+  .home-imatge {
+    position: relative;
+    width: auto;
+    height: 80vh;
+    overflow: hidden;
+  }
+  .home-imatge__image--back, .home-imatge__image--front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+
+    
+  }
+
+  @media (max-width: 600px) {
+    .home-imatge {
+      max-height: 30vh;
+    }
+    .home-imatge__image--back {
+      width: 100%;  
+      height: 60%;
+      animation: shrinkDisappear 6s forwards; 
+  }
+  
+  @keyframes shrinkDisappear {
+      0% {
+          height: 60%; 
+          opacity: 1;  
+      }
+      100% {
+          width: 0;
+          position: absolute;
+          height: 0;    
+          opacity: 0;  
+          display: none; 
+      }
+  }
+    
+
+}
+
+.footer-logo {
+  width: 25px;  
+  height: 20px;  
+}
+
+  .home-imatge__image--back {
+    background-image: url('../images/cortinaRoja.webp');
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+  }
+  .home-imatge__image--front {
+    background-image: url('../images/portadaPrincipal.webp');
+    z-index: 2;
+    animation: reveal 3.5s forwards;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .text__gira {
+    position: absolute;
+    top: 4%;
+    font-size: medium;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white; 
+    text-align: center;
+    width: 100%;
+    font-size: calc(1em + 2vh);
+
+    &__1{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 4s infinite linear;
+    }
+    &__2{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 4.25s infinite linear;
+    }
+    &__3{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 4.5s infinite linear;
+    }
+    &__4{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 4.75s infinite linear;
+    }
+    &__5{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 5s infinite linear;
+    }
+    &__6{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 5.25s infinite linear;
+    }
+    &__7{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 5.5s infinite linear;
+    }
+    &__8{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 5.75s infinite linear;
+    }
+    &__9{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 6s infinite linear;
+    }
+    &__10{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 6.25s infinite linear;
+    }
+    &__11{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 6.5s infinite linear;
+    }
+    &__12{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 6.75s infinite linear;
+    }
+    &__13{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 7s infinite linear;
+    }
+    &__14{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 7.25s infinite linear;
+    }
+    &__15{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 7.5s infinite linear;
+    }
+    &__16{
+        font-size: calc(1em + 0.4vh);
+        animation: animacioArcoiris 7.75s infinite linear;
+    }
+  }
+
+  @keyframes reveal {
+    0% {
+      clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  .h1__home{
+    font-size: calc(1em + 2vh);
   }

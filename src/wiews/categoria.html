@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="../assets/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/main.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,26 +16,85 @@
 </head>
 <body>
 
-  <header class="header">
-    <div class="header__grid">
-      <div class="header__grid__logo">
-        <a href="../index.html"> <img src="../assets/images/logo.png" alt="Logo Oques Grasses" class="logo"></a>
-      </div>
-    
-      
-          <nav class="navegacio">
-            <a class="navegacio__link" href="../index.html">Portada</a>
-            <a class="navegacio__link" href="./categoria.html">Categoria</a>
-            <a class="navegacio__link" href="./detall.html">Detall</a>
-            <a class="navegacio__link" href="./presentacio.html">Presentació</a>
-            <a class="navegacio__link" href="./enlaces.html">Enllaços</a>
-          </nav>
+
+
+  <!-- header nova proposta-->
+
+  <header>
+    <div class="header-back">
+        <div class="header-menu header-container">
+          <a href="../index.html"> <img src="../assets/images/logoOquesGrasses.svg" alt="Logo Oques Grasses" class="header-logo"></a>        
+          <!-- El input es checkbox per enganyar al navegador-->
+          <input type="checkbox" id="menu-navegador" />
+            <label for="menu-navegador">
+              <!-- Utilitze bars ja que pense que es la millor opció gratuita-->
+              <i class="fa-solid fa-bars fa-3x menu-icono"></i>
+            </label>
+            <nav class="navbar">
+              <ul>
+                <li><a class="navegacio__link" href="../index.html">Portada</a></li>
+                <li><a class="navegacio__link" href="./categoria.html">Categoria</a></li>
+                <li><a class="navegacio__link" href="./detall.html">Detall</a></li>
+                <li><a class="navegacio__link" href="./presentacio.html">Presentació</a></li>
+                <li><a class="navegacio__link" href="./enlaces.html">Enllaços</a></li>
+              </ul>
+            </nav>
+
+
+        </div>
+   
     </div>
   </header>
 
-
 <main>
 <h1 class="text-center">Dades d'oques Grasses</h1>
+
+<section>
+  <div class="contenidor">
+    <!-- idea original de https://www.youtube.com/watch?v=Q8BamnhOmWc&list=PL07efmqYWHZ9Acr4QPiecaGKsekcL2zvc -->
+    <div class="card__container">
+      <article class="card__article">
+          <img src="../assets/images/imatgeDestacada.webp" alt="Logo Gira" class="card__img">
+          <div class="card__data__text"> <!-- Nom de la classe corregit per coincidir amb el CSS -->
+            <h3 class="card__title">Nova Gira 2024!</h3> 
+            <span class="card__description">Gaudeix de la nostra nova gira!</span>
+              
+              <a href="#categoria-g" class="card__button">Compra les teues entrades</a>
+          </div>
+      </article>
+  </div>
+    <!--Card 2-->
+    <div class="card__container full-image-card" >
+        <article class="card__article">
+            <img src="../assets/images/imatgeDestacada.webp" alt="Oques Grasses Tour" class="card__img full-image">
+            <div class="card__data concert-info">
+                <h3>Pròxims Concerts</h3>
+                <p>Futurs concerts en Barcelona, València, Madrod i Girona. Mira les dates!</p>
+                <ul>
+                    <li><a href="#" class="concert-link">Barcelona - 20/07/2024</a></li>
+                    <li><a href="#" class="concert-link">Madrid - 15/08/2024</a></li>
+                    <li><a href="#" class="concert-link">València - 30/08/2024</a></li>
+                    <li><a href="#" class="concert-link">Girona - 10/09/2024</a></li>
+                </ul>
+            </div>
+        </article>
+    </div>
+    <!-- Card 3-->
+    <div class="card__container novelty-card">
+        <article class="card__article">
+            <h3 class="initial-text">Vols saber la gran novetat?</h3>
+            <div class="hover-data">
+                <img src="../assets/images/imatgeDestacada.webp" alt="Logo Gira" class="novelty-image">
+                <p class="novelty-text">Tenim nova gira!
+                  Compra ja les teues entrades abans que s'esgotin!
+                </p>
+            </div>
+        </article>
+    </div>
+</div>
+</section>
+
+
     <section id="categoria-a"  class="categoria-a text-center padding-2">
         <div class="categoria-a__container">
             
@@ -51,7 +110,7 @@
           <div class="categoria-a__specials">
             
               <figure class="text-center">
-                <img src="../assets/images/Concerts/oques-grasses-sant-jordi.jpg" alt="Palau Sant Jordi" class="special-icon">
+                <img src="../assets/images/Concerts/oques-grasses-sant-jordi.webp" alt="Palau Sant Jordi" class="special-icon">
                 <h3 >Palau Sant Jordi</h3>
                 <p >
                   Concert emblemàtic  
@@ -61,7 +120,7 @@
               </figure>
 
               <figure class="text-center">
-                <img src="../assets/images/Concerts/oques-grasses-valencia.jpeg" alt="Concert València" class="special-icon">
+                <img src="../assets/images/Concerts/oques-grasses-valencia.webp" alt="Concert València" class="special-icon">
                 <h3 >Concert València</h3>
                 <p >
                   Vivers de València. 
@@ -72,7 +131,7 @@
 
     
               <figure class="text-center">
-                <img src="../assets/images/Concerts/Palafrugell.jpg" alt="Palafrugell" class="special-icon">
+                <img src="../assets/images/Concerts/Palafrugell.webp" alt="Palafrugell" class="special-icon">
                 <figcaption>
                 <h3 >Palafrugell</h3>
                 <p >
@@ -83,7 +142,7 @@
               </figure>
 
               <figure class="text-center">
-                <img src="../assets/images/Concerts/OquesGrassesFarga.jpg" alt="Xativa" class="special-icon">
+                <img src="../assets/images/Concerts/OquesGrassesFarga.webp" alt="Xativa" class="special-icon">
                 <h3 >Xàtiva</h3>
                 <p >
                   Concert emblemàtic  
@@ -197,10 +256,10 @@
         <section id="categoria-f" class="categoria-f"> 
               <h2 >Qui formem Oques Grasses </h2>
               <div>
-                      <img src="../assets/images/galeria1jpg.jpg" alt="Oques Grasses Portades 1">
-                      <img src="../assets/images/galeria2.jpg" alt="Oques Grasses Portades 2">
-                      <img src="../assets/images/galeria3.jpg" alt="Oques Grasses Portades 3">
-                      <img src="../assets/images/galeria4.jpg" alt="Oques Grasses Portades 4">
+                      <img src="../assets/images/galeria1.webp" alt="Oques Grasses Portades 1">
+                      <img src="../assets/images/galeria2.webp" alt="Oques Grasses Portades 2">
+                      <img src="../assets/images/galeria3.webp" alt="Oques Grasses Portades 3">
+                      <img src="../assets/images/galeria4.webp" alt="Oques Grasses Portades 4">
               </div>
         </section>
     
@@ -301,41 +360,26 @@
 
 </main>
 
-    <footer class="footer">
-        <div class="footer__grid contenedor">
-            <div class="footer__grid__box">
-                <h3 class="footer__grid__box__heading">Nosaltres</h3>
-                <p class="footer__grid__box__text">
-                    Som Oques Grasses, una colla d'amics d'Osona que barreja pop, folk, reggae.
-                </p>
-            </div>
-            <div class="footer__box">
-                <h3 class="footer__grid__box__heading">Informació</h3>
-                <p class="footer__grid__box__links">
-                    <a href="#">Contacta</a>
-                    <a href="#">Concerts</a>
-                    <a href="#">Botiga</a>
-                    <a href="#">Sobre Nosaltres</a>
-                    <a href="#">Politica Cookies</a>
-                    <a href="#">Avís legal</a>
-                </p>
-            </div>
-            <div class="footer__grid__box">
-                <h3 >Subscriu-te</h3> 
-                <p>Rep les últimes notícies</p>         
-                <form action="#" class="footer__grid__box__form">
-    
-                    <input id="footer_email" type="email" name="email" placeholder="Introdueix el teu email"  >
-                    <div  class="footer__grid__box__form__checkbox">
-                        <input type="checkbox" name="terms" class="footer__grid__box__form__input" required> Accepto els termes i condicions.
-                    </div>
-                    <button id="footer__boto" class="footer__grid__box__form__boto" type="submit" disabled>Subscriure'm</button> 
-                </form>
-            </div>
-            
-        </div>
-        <p class="footer__copy"> &copy; 2024 Salvador Peiró PEC1 HTML </p>
-    </footer>
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__info">
+      <div class="footer__info__container">
+        <a href="../index.html"> <img src="../assets/images/logoOquesGrasses.svg" alt="Logo Oques Grasses" class="header-logo"></a>      </div>
+      <nav class="footer__nav">
+        <ul>
+          <li><a class="navegacio__link" href="../index.html">Portada</a></li>
+          <li><a class="navegacio__link" href="./categoria.html">Categoria</a></li>
+          <li><a class="navegacio__link" href="./detall.html">Detall</a></li>
+          <li><a class="navegacio__link" href="./presentacio.html">Presentació</a></li>
+          <li><a class="navegacio__link" href="./enlaces.html">Enllaços</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__author">
+      Copy © Salvador Peiró PEC2 HTML i CSS 1
+    </div>
+  </div>
+</footer>
     <script src="../assets/scripts/main.js"></script>
     </body>
 

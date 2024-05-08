@@ -539,3 +539,274 @@
     animation: animacioArcoiris 4s infinite linear;
   }
 }
+
+
+
+/* Base Styles */
+.contenidor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+
+.card__container {
+  position: relative;
+  width: 25vw;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px; /* Opcional: para bordes redondeados */
+}
+
+
+
+.card__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.card__data {
+      width: 280px;
+    background-color: var(--container-color);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;  /* Set initial opacity to 0 */
+    transition: opacity 2s ease hsla(0, 0%, 0%, .15);
+}
+.card__article{
+  display: flex;
+  width: 25vw;
+  height: auto;
+}
+
+.full-image-card .card__article:hover .card__img {
+  clip-path: circle(0% at 50% 50%);
+}
+
+.full-image-card .card__article:hover .card__data {
+  clip-path: circle(100% at 50% 50%);
+}
+
+.concert-info {
+  text-align: center;
+  background-color: #f0e1f4; /* Pastel color */
+}
+
+.concert-link {
+  text-decoration: none;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.concert-link:hover {
+  color: #333;
+}
+
+
+
+// Variables para colores y fuentes
+
+
+// Base Styles
+.contenidor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card__container {
+  position: relative;
+  width: 25vw;
+  height: auto;
+  max-height: 80%;
+  overflow: hidden;
+  border-radius: 10px;
+
+  &:hover{
+    .concert-info {
+      flex-direction: column;
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+}
+
+.card__article {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.card__data {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: $background-color;
+  clip-path: circle(0% at 50% 50%);
+  transition: all 0.5s ease;
+}
+
+// Hover effects for the full-image card
+.full-image-card .card__article:hover .card__img {
+  clip-path: circle(0% at 50% 50%);
+}
+
+.full-image-card .card__article:hover .card__data {
+  clip-path: circle(100% at 50% 50%);
+}
+
+// Concert info styling
+.concert-info {
+  text-align: center;
+  background-color: $pastel-color;
+  width: 100%;
+  font-size: 1.1vw;
+}
+
+.card__img, .card__data {
+  transition: clip-path 1s ease, opacity 1s ease, transform 1s ease;
+}
+
+.full-image-card .card__article {
+  &:hover {
+    .card__img {
+      clip-path: circle(0% at 50% 50%);
+    }
+    .card__data {
+      clip-path: circle(100% at 50% 50%);
+    }
+  }
+}
+
+.concert-link {
+  text-decoration: none;
+  color: $text-color;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $hover-text-color;
+  }
+}
+
+// Initial text and hover data animations
+.initial-text, .hover-data {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.initial-text {
+  background-color: $background-color;
+  z-index: 2;
+  font-size: 16px;
+  opacity: 1;
+}
+
+.hover-data {
+  flex-direction: column;
+  transform: translateX(-100%);
+  opacity: 0;
+  font-size: 1.2vw;
+  img{
+    width: 100%;
+    height: auto;
+    max-height: 90%;
+  }
+
+}
+
+.initial-text{
+  font-size: 2vw;
+}
+
+.novelty-image {
+  max-width: 100%;
+  height: auto;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.novelty-text {
+  text-align: center;
+  background-color: $hover-background-color;
+  color: white;
+  font-family: $font-family;
+  font-size: 1.3em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transform: translateX(-50px);
+}
+
+// Hover effects for novelty card
+.novelty-card:hover {
+  .initial-text {
+    opacity: 0;
+    font-size: 0;
+  }
+
+  .hover-data {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .novelty-image {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .novelty-text {
+    transform: translateX(0);
+  }
+}
+
+
+.card__data__text {
+  position: absolute;
+  top: 100%; /* Inicia fora de la vista, just sota la part inferior de la tarjeta */
+  left: 0;
+  right: 0;
+  font-size: 1.6vw;
+  background-color: rgba(207, 207, 207, 0.948);
+  transition: transform 0.5s ease-out;
+  transform: translateY(0);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card__container:hover .card__data__text {
+  transform: translateY(-100%); /* Mou el contenidor a la vista */
+}

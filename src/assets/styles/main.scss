@@ -5,3 +5,14 @@
 @import "./layout/detall.scss";
 @import "./layout/presentacio.scss";
 @import "./layout/enlaces.scss";
+@import "./layout/header.scss";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+
