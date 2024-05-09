@@ -169,3 +169,15 @@
       }
     }
 }
+
+.enlaces-b__text .text__enllacos{
+  font-weight: bolder;
+  color: darkblue;
+  font-size: 1.1rem;
+  font-family: $font-family-Comic;
+  &:hover{
+    color: green;
+    text-decoration: underline;
+
+  }
+}
