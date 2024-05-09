@@ -14,7 +14,6 @@
     h1{
         text-align: center;
         margin-top: 5vh;
-        font-size: 7vh;
     }
 
     &__historia__text{
@@ -207,7 +206,7 @@
     font-size: calc(1em + 2vh);
 
     &__1{
-        font-size: calc(1em + 0.4vh);
+        font-size: calc( 0.4vh);
         animation: animacioArcoiris 4s infinite linear;
     }
     &__2{
@@ -281,6 +280,6 @@
     }
   }
 
-  .h1__home{
-    font-size: calc(1em + 2vh);
-  }
+  .h1__home span {
+    font-size: calc(1em + 0.3vw);
+}

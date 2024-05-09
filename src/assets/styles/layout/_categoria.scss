@@ -84,8 +84,17 @@
           margin-bottom: 4rem;
           padding: 1rem;
           img{
-            width: 35vh;
-            height:35vh;
+            width: 18vw;
+            height:auto;
+            @media (max-width: $tablet) {
+              width: 35vw;
+            }
+
+            @media (max-width: $phone) {
+              width: 80vw;
+            }
+            
+            
           }
         }
                 
@@ -619,12 +628,14 @@
 
 
 // Base Styles
-.contenidor {
+.categoria__contenidor {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   padding: 20px;
+
+
 }
 
 .card__container {
@@ -634,6 +645,11 @@
   max-height: 80%;
   overflow: hidden;
   border-radius: 10px;
+
+  @media (max-width: $tablet) {
+    
+    width: 80%;
+  }
 
   &:hover{
     .concert-info {
@@ -647,12 +663,12 @@
 .card__article {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .card__img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   transition: all 0.5s ease;
 }
@@ -687,7 +703,8 @@
   text-align: center;
   background-color: $pastel-color;
   width: 100%;
-  font-size: 1.1vw;
+  font-size: 1.15rem;
+
 }
 
 .card__img, .card__data {
@@ -729,7 +746,6 @@
 .initial-text {
   background-color: $background-color;
   z-index: 2;
-  font-size: 16px;
   opacity: 1;
 }
 
@@ -737,11 +753,12 @@
   flex-direction: column;
   transform: translateX(-100%);
   opacity: 0;
-  font-size: 1.2vw;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
   img{
     width: 100%;
     height: auto;
-    max-height: 90%;
+    max-height: 80%;
   }
 
 }
@@ -762,7 +779,7 @@
   background-color: $hover-background-color;
   color: white;
   font-family: $font-family;
-  font-size: 1.3em;
+  font-size: 1.03em;
   padding: 5px 10px;
   border-radius: 5px;
   transform: translateX(-50px);
@@ -796,7 +813,7 @@
   top: 100%; /* Inicia fora de la vista, just sota la part inferior de la tarjeta */
   left: 0;
   right: 0;
-  font-size: 1.6vw;
+  font-size: 1.4rem;
   background-color: rgba(207, 207, 207, 0.948);
   transition: transform 0.5s ease-out;
   transform: translateY(0);
