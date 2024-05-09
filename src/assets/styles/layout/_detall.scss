@@ -290,16 +290,19 @@ margin-top: 100px ;
     &__meta{
       background-color: lightcoral;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       padding: 0 1rem;
-      color: whitesmoke;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+
       &__preu{
         background-color: $main-color;
         padding: 0.5rem;
         font-size: 1.2rem;
         color:black;
         border-radius: 1rem;
+        margin-left: 2.5vw;
       }
 
       &__data{

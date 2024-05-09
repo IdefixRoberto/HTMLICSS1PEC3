@@ -549,7 +549,9 @@
   }
 }
 
-
+.scale:hover {
+  transform: scale(1.05);
+}
 
 /* Base Styles */
 .contenidor {
