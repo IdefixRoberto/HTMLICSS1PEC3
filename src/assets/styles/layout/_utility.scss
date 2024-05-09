@@ -76,10 +76,18 @@
       margin-bottom: 3vh;
     }
 
+.rosa{
+  color: lightcoral
+}
 
-
-  .rosa{
-    color: lightcoral;
+  .red__color{
+    color: rgba(208, 0, 0, 0.902);
+    &:hover{
+      color:red;
+      text-decoration: underline;
+      font-weight: bolder;
+      font-family: $font-family-Comic;
+    }
   }
 
   .gray{
