@@ -641,10 +641,13 @@ margin-top: 100px ;
 }
 
 
-.blue__color{
-  color: rgb(15, 15, 64);
+.concert .concert-text .blue__color{
+  color: rgb(30, 30, 185);
+  font-family: $font-family-Comic;
+  font-weight: bolder;
+  font-size: 1.3vw;
   &:hover{
-    color:aqua;
+    color:green;
     font-weight: bold;
   }
 }
