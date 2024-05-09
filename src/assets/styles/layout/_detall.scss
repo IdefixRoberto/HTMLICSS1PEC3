@@ -639,3 +639,12 @@ margin-top: 100px ;
 .h1__home{
   text-align: center;
 }
+
+
+.blue__color{
+  color: rgb(15, 15, 64);
+  &:hover{
+    color:aqua;
+    font-weight: bold;
+  }
+}
