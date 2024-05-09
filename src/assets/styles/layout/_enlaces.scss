@@ -47,8 +47,11 @@
     }
 
     &__text{
+      color:black;
         p{
-            margin-left: 3vh;
+          font-family: $font-family-Comic;
+          font-size: 1.1rem;  
+          margin-left: 3vh;
         }
     }
 }
