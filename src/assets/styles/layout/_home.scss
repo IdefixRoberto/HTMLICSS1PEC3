@@ -141,9 +141,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
 
-
+    img{
+      width: 100%;
+      height: auto;
+    }
     
   }
 
@@ -154,7 +157,9 @@
     .home-imatge__image--back {
       width: 100%;  
       height: 60%;
-      animation: shrinkDisappear 6s forwards; 
+      animation: shrinkDisappear 6s forwards;
+      
+
   }
   
   @keyframes shrinkDisappear {
