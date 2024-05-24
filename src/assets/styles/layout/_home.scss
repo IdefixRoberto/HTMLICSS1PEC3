@@ -1,288 +1,186 @@
 @import "utility";
 @import "variables";
 
-
-.home-imatge .text__gira .h1__home {
-    font-size: calc(5.5vw );
-    margin-top: 3%;
+// Estils generals per a la pàgina
+body {
+  font-family: 'Comic Neue', sans-serif;
 }
 
+.header-logo {
+  width: 100px; // Dimensions explícites per a la imatge del logo
+  height: 50px;
+}
 
-.home {  
-    // Estils generals per tot el main
+.home-imatge {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
 
-    h1{
-        text-align: center;
-        margin-top: 5vh;
-    }
-
-    &__historia__text{
-        padding: 0 20%;
-        justify-content: center;
-        align-items: center;
-        display: grid;
-        line-height: 1.5;
-        text-align: justify;
-        @media (max-width:$tablet) {
-            padding: 0 10%;
-        }
-        @media (max-width:$phone) {
-            padding: 0 5%;
-        }
-
-        p{
-            margin: 1.5vh 0 ;
-        }
-    }
-  
-    &__historia, &__videos, &__xarxes {
-      margin-bottom: 5vh; // Espai entre seccions 
-        
-      h2 {
-        font-family: $font-family-Comic;
-        margin-bottom: 5vh;
-        font-size: 5vh;
-      }
-    }
-    
-    
-    &__videos__container { 
-      display: grid;
-      margin: 0 5%;
-      grid-template-columns: repeat(2, 1fr); // Responsive videos 
-      
-        @media (max-width: $phone) {
-            grid-template-columns: 1fr;
-            width: 50%;
-            margin:0 25%;
-            max-width: 300px;
-            
-            .home__videos__container__video{
-                max-width: 300px;
-                max-height: 300px;
-                width: 90%;
-
-            }
-        }
-        
-      width: 70%;
-      margin-left: auto;
-      margin-right: auto;
-      justify-content: center;
-      align-items: center;
-      gap: 10vh;
-
-  
-      &__video {
-        margin: 2.5vh 0;
-        iframe{
-            border-radius: 10%;
-            width: 45vh;
-            height: 35vh;
-
-            @media (max-width: $tablet) 
-            {
-            width: 40vh;
-            height: 25vh;    
-            }
-        }
-
-       
-      }
-    }
-    &__xarxes, &__historia,&__videos {
-        margin: 2.5vh 0;
-    }
-
-    &__xarxes{
-        
-        
-    &__llista {
-     
-        display: flex; 
-        list-style: none;
-        margin: 5vh 20%;
-        justify-content: space-around;
-       
- 
-        @media (max-width:$phone) {
-            display: grid;
-            grid-template-columns: repeat(2, 100px);
-            gap: 5vh;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        li {
-          
-          img {
-            width: 100%;
-            max-width: 7.5vw; 
-            height: auto; 
-            transition: transform 0.2s ease;
-          }
-  
-          &:hover img {
-            transform: scale(1.1); // Augmenta la mida al fer hover
-          }
-        }
-      }
-    }
-  }
-
-  .home-imatge {
-    position: relative;
-    width: auto;
-    height: 80vh;
-    overflow: hidden;
-  }
-  .home-imatge__image--back, .home-imatge__image--front {
+  &__image--back, &__image--front {
     position: absolute;
     top: 0;
     left: 0;
-
-
-    img{
-      width: 100%;
-      height: auto;
-    }
-    
-  }
-
-  @media (max-width: 600px) {
-    .home-imatge {
-      max-height: 60vh;
-    }
-    .home-imatge__image--back {
-      width: 100%;  
-      height: 60%;
-      animation: shrinkDisappear 6s forwards;
-      
-
-  }
-  
-  @keyframes shrinkDisappear {
-      0% {
-          height: 60%; 
-          opacity: 1;  
-      }
-      100% {
-          width: 0;
-          position: absolute;
-          height: 0;    
-          opacity: 0;  
-          display: none; 
-      }
-  }
-    
-
-}
-
-.footer-logo {
-  width: 25px;  
-  height: 20px;  
-}
-
-  .home-imatge__image--back {
-    z-index: 2;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
   }
-  .home-imatge__image--front {
-    background-image: url('../images/portadaPrincipal.webp');
+
+  &__image--back {
+    background-image: url('../images/cortinaRoja.webp');
     z-index: 2;
+  }
+
+  &__image--front {
+    background-image: url('../images/portadaPrincipal.webp');
+    z-index: 3;
     animation: reveal 3.5s forwards;
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
   }
-  .text__gira {
-    position: absolute;
-    top: 4%;
-    font-size: medium;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    color: white; 
+}
+
+// Animació per revelar la imatge
+@keyframes reveal {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+// Text centrat amb animació arcoiris
+.text__gira {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  color: white; 
+  text-align: center;
+  width: 100%;
+  font-size: calc(1em + 2vh);
+
+  &__1, &__2, &__3, &__4, &__5, &__6, &__7, &__8, &__9, &__10, &__11, &__12, &__13, &__14, &__15, &__16 {
+    animation: animacioArcoiris 5s infinite linear;
+  }
+}
+
+@keyframes animacioArcoiris {
+  0% { color: red; }
+  25% { color: orange; }
+  50% { color: yellow; }
+  75% { color: green; }
+  100% { color: blue; }
+}
+
+// Estils per la secció de història
+.home__historia {
+  padding: 0 20%;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 5vh;
+
+  @media (max-width: $tablet) {
+    padding: 0 10%;
+  }
+
+  @media (max-width: $phone) {
+    padding: 0 5%;
+  }
+
+  p {
+    margin: 1.5vh 0;
+  }
+
+  h2 {
     text-align: center;
-    width: 100%;
-    font-size: calc(1em + 2vh);
+    font-family: $font-family-Comic;
+    margin-bottom: 5vh;
+    font-size: 5vh;
+  }
+}
 
-    &__1{
-        font-size: calc( 0.4vh);
-        animation: animacioArcoiris 4s infinite linear;
+// Estils per la secció de vídeos
+.home__videos {
+  margin-bottom: 5vh;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10vh;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $phone) {
+      grid-template-columns: 1fr;
+      width: 50%;
+      max-width: 300px;
+      margin: 0 25%;
     }
-    &__2{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 4.25s infinite linear;
-    }
-    &__3{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 4.5s infinite linear;
-    }
-    &__4{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 4.75s infinite linear;
-    }
-    &__5{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 5s infinite linear;
-    }
-    &__6{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 5.25s infinite linear;
-    }
-    &__7{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 5.5s infinite linear;
-    }
-    &__8{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 5.75s infinite linear;
-    }
-    &__9{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 6s infinite linear;
-    }
-    &__10{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 6.25s infinite linear;
-    }
-    &__11{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 6.5s infinite linear;
-    }
-    &__12{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 6.75s infinite linear;
-    }
-    &__13{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 7s infinite linear;
-    }
-    &__14{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 7.25s infinite linear;
-    }
-    &__15{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 7.5s infinite linear;
-    }
-    &__16{
-        font-size: calc(1em + 0.4vh);
-        animation: animacioArcoiris 7.75s infinite linear;
+
+    &__video {
+      margin: 2.5vh 0;
+      iframe {
+        border-radius: 10%;
+        width: 45vh;
+        height: 35vh;
+
+        @media (max-width: $tablet) {
+          width: 40vh;
+          height: 25vh;    
+        }
+      }
     }
   }
+}
 
-  @keyframes reveal {
-    0% {
-      clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+// Estils per la secció de xarxes socials
+.home__xarxes {
+  margin-bottom: 5vh;
+  
+  &__llista {
+    display: flex; 
+    list-style: none;
+    margin: 5vh 20%;
+    justify-content: space-around;
+    
+    @media (max-width: $phone) {
+      display: grid;
+      grid-template-columns: repeat(2, 100px);
+      gap: 5vh;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-    100% {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    li {
+      img {
+        width: 100%;
+        max-width: 7.5vw; 
+        height: auto; 
+        transition: transform 0.2s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.1); // Augmenta la mida al fer hover
+      }
     }
   }
+}
 
-  .h1__home span {
-    font-size: calc(1em + 0.3vw);
+// Estils per la secció de vídeos i xarxes
+.home__videos, .home__xarxes {
+  margin: 2.5vh 0;
+}
+
+// Estils per el logo al footer
+.footer--logo {
+  width: 100px;
+  height: 50px;
 }
