@@ -149,7 +149,7 @@
 
   @media (max-width: 600px) {
     .home-imatge {
-      max-height: 30vh;
+      max-height: 60vh;
     }
     .home-imatge__image--back {
       width: 100%;  
@@ -180,7 +180,6 @@
 }
 
   .home-imatge__image--back {
-    background-image: url('../images/cortinaRoja.webp');
     z-index: 2;
     background-size: cover;
     background-position: center;

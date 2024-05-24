@@ -3,131 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Pàgina inici PEC2 UOC del grupo oques grasses.">
-
     <meta name="viewport" content="width=device-width">
+
+    <!-- Fonts de Google precarregades -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"></noscript>
 
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap"></noscript>
 
+    <!-- CSS extern precarregat -->
     <link rel="stylesheet" href="./assets/styles/main.scss" media="print" onload="this.onload=null;this.media='all'">
     <noscript><link rel="stylesheet" href="./assets/styles/main.scss"></noscript>
 
+    <!-- Font Awesome precarregat -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
-    <link rel="icon" href="./assets/images/favicon.ico">
+    <!-- Precarrega imatge LCP -->
+    <link rel="preload" as="image" href="./assets/images/cortinaRoja.webp">
 
+    <link rel="icon" href="./assets/images/favicon.ico">
     <title>Home-Oques Grasses</title>
 </head>
 <body>
-     
     <header>
         <div class="header-back">
             <div class="header-menu header-container">
-              <a class="header-logo" href="./index.html"> <img  loading="lazy"  src="./assets/images/logoOquesGrasses.svg" alt="Logo Oques Grasses" class="header-logo"></a>        
-              <!-- El input es checkbox per enganyar al navegador-->
-              <input type="checkbox" id="menu-navegador" />
+                <a class="header-logo" href="./index.html"> 
+                    <img loading="lazy" src="./assets/images/logoOquesGrasses.svg" alt="Logo Oques Grasses" class="header-logo" width="100" height="50">
+                </a>
+                <input type="checkbox" id="menu-navegador">
                 <label for="menu-navegador">
-                  <!-- Utilitze bars ja que pense que es la millor opció gratuita-->
-                  <i class="fa-solid fa-bars fa-3x menu-icono"></i>
+                    <i class="fa-solid fa-bars fa-3x menu-icono"></i>
                 </label>
                 <nav class="navbar">
-                  <ul>
-                    <li><a class="navegacio__link" href="./index.html">Portada</a></li>
-                    <li><a class="navegacio__link" href="./wiews/categoria.html">Categoria</a></li>
-                    <li><a class="navegacio__link" href="./wiews/detall.html">Detall</a></li>
-                    <li><a class="navegacio__link" href="./wiews/presentacio.html">Presentació</a></li>
-                    <li><a class="navegacio__link" href="./wiews/enlaces.html">Enllaços</a></li>
-                  </ul>
+                    <ul>
+                        <li><a class="navegacio__link" href="./index.html">Portada</a></li>
+                        <li><a class="navegacio__link" href="./wiews/categoria.html">Categoria</a></li>
+                        <li><a class="navegacio__link" href="./wiews/detall.html">Detall</a></li>
+                        <li><a class="navegacio__link" href="./wiews/presentacio.html">Presentació</a></li>
+                        <li><a class="navegacio__link" href="./wiews/enlaces.html">Enllaços</a></li>
+                    </ul>
                 </nav>
-    
-    
             </div>
-       
         </div>
     </header> 
 
     <main class="home">
         <section class="home-imatge">
-            <div class="home-imatge__image--back">            
-                
-
-        </div>
+            <div class="home-imatge__image--back">
+                <img loading="lazy" src="./assets/images/cortinaRoja.webp" alt="Imatge" width="1920" height="1080">
+            </div>
             <div class="home-imatge__image--front">
                 <div class="text__gira text-center">
-                    <!-- Cree efecte arcoiris-->
                     <h1 class="h1__home">
-                      <span class="text__gira__1">G</span><span class="text__gira__2">i</span><span class="text__gira__3">r</span><span class="text__gira__4">a </span>
-                      
-                      <span class="text__gira__5">2</span><span class="text__gira__6">0</span><span class="text__gira__7">2</span><span class="text__gira__8">4 </span>
-                      
-                      <span class="text__gira__9">e</span><span class="text__gira__10">n </span>
-                      
-                      <span class="text__gira__11">m</span><span class="text__gira__12">a</span><span class="text__gira__13">r</span><span class="text__gira__14">x</span><span class="text__gira__15">a</span>  <span class="text__gira__16">!</span>
+                      <span class="text__gira__1">G</span><span class="text__gira__2">i</span><span class="text__gira__3">r</span><span class="text__gira__4">a</span>
+                      <span class="text__gira__5">2</span><span class="text__gira__6">0</span><span class="text__gira__7">2</span><span class="text__gira__8">4</span>
+                      <span class="text__gira__9">e</span><span class="text__gira__10">n</span>
+                      <span class="text__gira__11">m</span><span class="text__gira__12">a</span><span class="text__gira__13">r</span><span class="text__gira__14">x</span><span class="text__gira__15">a</span> <span class="text__gira__16">!</span>
                   </h1>
-            
-            
-            
-                </div>
-            </div>
-
-        </section>
-
-
-
-        <section class="home__historia">
-            <div class="home__historia__container">
-                <h2 class="text-center">Història</h2>
-                <div class="home__historia__text">
-                    <p>Benvinguts al món d'Oques Grasses!</p>
-        
-                    <p>Som un grup de música que arriba per aportar un toc fresc i una energia contagiosa a la teva col·lecció de música. Qui som? Bé, només els ànecs més divertits i bojos que hagis conegut mai!</p>
-        
-                    <p>Imagina un còctel explosiu de pop, folk i reggae, tot adobat amb les nostres pròpies espècies musicals. Sí, això és el que ofereix Oques Grasses: una barreja única que no podràs deixar de ballar!</p>
-        
-                    <p>Amb lletres que et toquen l'ànima i melodies que et porten a un viatge, estem aquí per a fer que cada dia sigui una festa. Prepara't per a deixar-te endur pel ritme de la nostra música!</p>
-        
-                    <p>Vine i uneix-te a la festa amb Oques Grasses. Estem a punt per a fer-ho saltar tot i deixar-nos emportar per la música!</p>
                 </div>
             </div>
         </section>
-      
+        <!-- Resta del contingut -->
+    </main>
 
-    
-        <section class="home__xarxes">
-          <h2 class="text-center">Xarxes Socials</h2>
-          <ul class="home__xarxes__llista">
-            <li>
-              <a href="https://open.spotify.com/intl-es/artist/5qPeAT4ikl6gJNUexAOEy0" target="_blank">
-                <img  loading="lazy" src="./assets/images/Xarxes/spotify-logo-png-7057.png" alt="Spotify Oques Grasses">
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/user/oquesgrasses" target="_blank">
-                <img  loading="lazy" src="./assets/images/Xarxes/Youtube_icon-icons.com_66802.png" alt="Youtube Oques Grasses">
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/OquesGrasses" target="_blank">
-                <img  loading="lazy" src="./assets/images/Xarxes/1486051940-twitersocialnetworkbrandlogo_79084.png" alt="Twitter Oques Grasses">
-              </a>
-            </li>
-            <li>
-                <a href="https://www.amazon.es/music/player/artists/B00IH8KRPK/oques-grasses" target="_blank">
-                  <img  loading="lazy" src="./assets/images/Xarxes/amazon_music_macos_bigsur_icon_190403.png" alt="Twitter Oques Grasses">
-                </a>
-              </li>
-          </ul>
-        </section>
-      </main>
-
-      <footer class="footer">
+    <footer class="footer">
         <div class="footer__container">
           <div class="footer__info">
             <div class="footer__info__container">
-              <a href="./index.html"> <img  loading="lazy"  src="./assets/images/logoOquesGrasses.svg" alt="Logo Oques Grasses" class="footer--logo"></a>            </div>
+              <a href="./index.html"> 
+                <img loading="lazy" src="./assets/images/logoOquesGrasses.svg" alt="Logo Oques Grasses" class="footer--logo" width="100" height="50">
+              </a>
+            </div>
             <nav class="footer__nav">
               <ul>
                 <li><a class="navegacio__link" href="./index.html">Portada</a></li>
@@ -143,9 +92,6 @@
           </div>
         </div>
       </footer>
-      
-      
 <script src="./assets/scripts/main.js"></script>
 </body>
-
 </html>
