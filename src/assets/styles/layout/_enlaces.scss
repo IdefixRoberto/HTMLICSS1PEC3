@@ -45,17 +45,17 @@
     }
     &__Imatge {
         img {
-            margin-top: 12px;
-            margin-bottom: auto;
-            width: 10vh;
-            height: 16vh;
+            margin: 12px;
+            width: 90%;
+            max-width: 25vw;
+            height: auto;
         }
     }
 
     &__text {
         color: #000000; // Negre per a major contrast
         p {
-            font-family: $font-family-Comic;
+            font-family: 'Times New Roman', Times, serif;
             font-size: 1.1rem;
             margin-left: 3vh;
         }
@@ -178,7 +178,7 @@
     font-weight: bolder;
     color: darkblue;
     font-size: 1.1rem;
-    font-family: $font-family-Comic;
+    font-family: 'Times New Roman', Times, serif;
     &:hover {
         color: green;
         text-decoration: underline;

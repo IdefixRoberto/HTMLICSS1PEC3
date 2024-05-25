@@ -4170,16 +4170,16 @@ h2 {
   background-color: #f9f9f9; }
 
 .enlaces-b__Imatge img {
-  margin-top: 12px;
-  margin-bottom: auto;
-  width: 10vh;
-  height: 16vh; }
+  margin: 12px;
+  width: 90%;
+  max-width: 25vw;
+  height: auto; }
 
 .enlaces-b__text {
   color: #000000; }
 
 .enlaces-b__text p {
-  font-family: "Comic Neue", "Times New Roman", serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.1rem;
   margin-left: 3vh; }
 
@@ -4288,7 +4288,7 @@ h2 {
   font-weight: bolder;
   color: darkblue;
   font-size: 1.1rem;
-  font-family: "Comic Neue", "Times New Roman", serif; }
+  font-family: 'Times New Roman', Times, serif; }
 
 .enlaces-b__text .text__enllacos:hover {
   color: green;
