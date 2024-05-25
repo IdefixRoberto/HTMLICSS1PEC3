@@ -52,17 +52,34 @@
             @media (max-width: $tablet) {
                 width: 250px;
                 height: 300px;
+                margin: 6px;
             }
 
-            @media (max-width: $tablet) {
-                width: 250px;
+            @media (max-width: $phone) {
+                width: 150px;
                 height: 200px;
+                margin: 3px;
             }
         }
     }
 
     &__text {
         color: #000000; // Negre per a major contrast
+        margin: 12px;
+        width: 300px;
+        max-width: 25vw;
+        height: 350px;
+        @media (max-width: $tablet) {
+            width: 250px;
+            height: 300px;
+            margin: 6px;
+        }
+
+        @media (max-width: $phone) {
+            width: 150px;
+            height: 200px;
+            margin: 3px;
+        }
         p {
             font-family: 'Times New Roman', Times, serif;
             font-size: 1.1rem;
