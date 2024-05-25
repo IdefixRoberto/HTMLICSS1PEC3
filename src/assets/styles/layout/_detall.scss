@@ -3,139 +3,35 @@
 @import "home";
 @import "navegacio";
 
+
 .container {
-  max-width: 1000px;
+  width:80vw;
+  
   margin: 0 auto;
   padding: 20px;
 
   @media (max-width: $tablet) {
+    
     text-align: center;
   }
 }
 
-.detall-b {
-  display: grid;
-  justify-content: center;
-  align-items: center;
 
-  @media (max-width: $phone) {
-    width: 100%;
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    gap: 0;
-    width: 100vh;
-    height: 100vh;
-    margin: 0;
-
-    @media (max-width: $phone) {
-      grid-template-columns: 1fr;
-      width: 100%;
-      height: 100%;
-
-      > div:nth-child(3) {
-        order: 4;
-      }
-
-      > div:nth-child(4) {
-        order: 3;
-      }
-
-      .detall-b__grid__bloc__contingut {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    &__bloc {
-      .detall-b__grid__bloc:nth-child(3) {
-        order: 4;
-      }
-
-      .detall-b__grid__bloc:nth-child(4) {
-        order: 3;
-      }
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: whitesmoke;
-      max-width: 80vh;
-      max-height: auto;
-
-      &:nth-child(1) {
-        background-color: lightcoral;
-      }
-
-      &:nth-child(4) {
-        background-color: lightblue;
-      }
-
-      &:nth-child(2) {
-        background-image: url("/src/assets/images/galeria4.webp");
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-      }
-
-      &:nth-child(3) {
-        background-image: url("/src/assets/images/portadaPrincipal.webp");
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-      }
-
-      @media (max-width: $tablet) {
-        .detall-b__grid__bloc:nth-child(3) {
-          order: 4;
-        }
-
-        .detall-b__grid__bloc:nth-child(4) {
-          order: 3;
-        }
-      }
-
-      @media (max-width: $phone) {
-        height: 10rem;
-      }
-
-      &__contingut {
-        max-width: 20rem;
-        border-top: 1px solid whitesmoke;
-        border-bottom: 1px solid whitesmoke;
-
-        &__heading {
-          margin-top: 2rem;
-        }
-
-        &__text {
-          margin-bottom: 2rem;
-        }
-      }
-    }
-  }
-}
 
 .concert {
   display: flex;
   align-items: center;
-  margin-bottom: 5vh;
-
-  h3 {
+  margin-bottom: 15vh;
+  
+  h3{
     transform: translateX(-30%);
   }
-
   @media (max-width: $tablet) {
     flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
-
-    h3 {
+    h3{
       transform: translateX(0);
     }
   }
@@ -143,52 +39,49 @@
   &.concert-reversed {
     flex-direction: row-reverse;
     text-align: start;
-
-    a,
-    p {
+    a, p{
       transform: translateX(30%);
-      display: flex;
+      display:flex;
       flex-direction: column;
     }
-
-    h3 {
+    
+    h3{
       transform: translateX(5%);
     }
-
     @media (max-width: $tablet) {
       display: grid;
       text-align: center;
       justify-content: center;
       align-items: center;
-
-      h3 {
+      h3{
         transform: translateX(0);
       }
 
-      a,
-      p {
+      a, p{
         transform: translateX(0);
+
       }
     }
   }
 
-  .concert-image {
-    width: 40%;
-    height: auto;
-    object-fit: cover;
-    transform: rotate(-5deg);
-    margin: 0 20px;
 
+
+  .concert-image {
+    width: 35vw; 
+    height: auto; 
+    object-fit: cover; 
+    transform: rotate(-5deg); /* Inclinació */
+    margin: 0 20px;
     @media (max-width: $tablet) {
-      transform: rotate(0);
-      width: 90vw;
-      height: auto;
+      transform: rotate(0); 
+      width: 90vw; 
+      height: auto; 
+  
     }
   }
 
   .concert-text {
-    width: 60%;
-
+    width: 60%; 
     h2 {
       margin-bottom: 1vh;
     }
@@ -197,20 +90,19 @@
       color: $main-color;
       text-decoration: none;
     }
-
+    
     @media (max-width: $tablet) {
-      width: 100%;
+      width: 100%; 
       text-align: center;
       margin-top: 5vh;
     }
-  }
+    }
+}
+.detall-a{
+margin-top: 100px ;
 }
 
-.detall-a {
-  margin-top: 100px;
-}
-
-.detall-d {
+.detall-d{
   font-family: 'Comic Neue', sans-serif;
   max-width: 80%;
   margin: 0 auto 1rem auto;
@@ -220,60 +112,68 @@
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
-  }
 
-  details {
-    border: $dark-color solid 0.3rem;
-    margin: 0 auto 3rem auto;
-    padding: 0.4rem;
-    border-radius: 2rem;
-    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.8);
-
-    &:hover {
-      box-shadow: 0.2rem 0.2rem 1.2rem red;
     }
 
-    summary {
-      padding: 1.2rem;
+    details {
+      border: $dark-color solid 0.3rem;
+      margin: 0 auto 3rem auto;
+      padding: 0.4rem;
+      border-radius: 2rem;
+      box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.8);
+
+
+          &:hover {
+            box-shadow: 0.2rem 0.2rem 1.2rem red;
+          }
+
+
+
+          summary {
+            padding: 1.2rem;
+          }
+
+          p {
+            padding: 0.1rem;
+            line-height: 1.2rem;
+            color: blue;
+            padding-left: 1.6rem;
+            padding-bottom: .4rem;
+          }
+
+          }
+
+
     }
 
-    p {
-      padding: 0.1rem;
-      line-height: 1.2rem;
-      color: blue;
-      padding-left: 1.6rem;
-      padding-bottom: 0.4rem;
-    }
-  }
-}
-
-.detall__concerts {
+.detall__concerts{
   background-color: lightgray;
   padding: 5rem 0;
-
-  &__concert {
+  
+  &__concert{
     border: 1px solid darken(lightgray, 10%);
-    background: rgb(212, 212, 212);
+    background: rgb(212, 212, 2122);
     display: grid;
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    img {
+  
+    img{
       width: 100%;
       height: auto;
-      max-height: 40vh;
+      max-height: 40vh;   
     }
-
-    &__content {
+  
+    &__content{
+  
     }
-
-    h3,
-    p {
-      margin: 1rem;
-    }
-
-    &__meta {
+  
+      h3, p{
+        margin: 1rem;
+      }
+    
+  
+    &__meta{
       background-color: lightcoral;
       display: flex;
       justify-content: center;
@@ -282,43 +182,44 @@
       color: rgb(0, 0, 0);
       font-weight: bold;
 
-      &__preu {
+      &__preu{
         background-color: $main-color;
         padding: 0.5rem;
         font-size: 1.2rem;
-        color: black;
+        color:black;
         border-radius: 1rem;
         margin-left: 2.5vw;
       }
 
-      &__data {
+      &__data{
         font-size: 2rem;
       }
     }
-
-    &__texto {
+    &__texto{
       margin: 1rem;
       align-items: stretch;
     }
+  
 
-    &__imagen {
+  
+    &__imagen{
       width: 100%;
+      height: 90%;
     }
-
-    &__descripcio {
-      color: rgb(25, 25, 25);
+  
+    &__descripcio{
+      color:rgb(25, 25, 25);
       font-family: $font-family-Comic;
       font-weight: 800;
       font-size: 2.4vh;
-
-      &:hover {
+      &:hover{
         color: red;
         transform: scale(1.1);
         text-decoration: underline;
       }
     }
-
-    &__enlace {
+    &__enlace{
+     
       justify-content: center;
       text-align: center;
       align-items: center;
@@ -328,57 +229,65 @@
       font-weight: 700;
       color: antiquewhite;
     }
+  
   }
 
-  &__grid {
+  &__grid{
     display: grid;
     align-items: stretch;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 1.5rem;
-    margin: 0 3rem;
+
+
+      margin: 0 3rem;
 
     @media (max-width: $tablet) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2,1fr);
       gap: 1rem;
       margin: 0;
       width: 80%;
       margin: 0 auto;
+      
     }
 
     @media (max-width: 746px) {
-      grid-template-columns: 1fr;
+      grid-template-columns:1fr;
       gap: 1rem;
+      
 
-      .detall__concerts__grid {
+       
+      
+      .detall__concerts__grid{
         width: 100%;
       }
     }
+
   }
 }
 
-.fa-ticket {
+
+
+.fa-ticket{
   margin: 0 2rem;
 }
 
-.llistat__disc {
-  h2 {
+.llistat__disc{
+  h2{
     margin-top: 2rem;
+
   }
 
-  ul {
+  ul{
     display: flex;
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
     margin: 0 5rem;
-
-    li {
+    li{
       margin: 1rem 1rem;
     }
   }
-
-  .imatge__enllaç {
+  .imatge__enllaç{
     width: 20rem;
     height: 20rem;
-
     @media (max-width: $tablet) {
       width: 80vw;
       height: auto;
@@ -387,49 +296,54 @@
     @media (max-width: $phone) {
       width: 70vw;
       height: auto;
+      
     }
   }
 
   @media (max-width: $phone) {
     flex-direction: column;
+    
   }
 }
 
-.detall-g {
-  &__div {
+
+
+
+
+.detall-g{
+  
+
+  &__div{ 
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  &__ul{
     display: flex;
-    flex-direction: column;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      li{
+        margin: 0 5px;
+    }
+  }
     justify-content: center;
-    text-align: center;
-    align-items: center;
-
-    &__ul {
-      display: flex;
-
-      @media (max-width: $tablet) {
-        flex-direction: column;
-
-        li {
-          margin: 0 5px;
-        }
-      }
-
-      justify-content: center;
-
-      li {
-        margin-left: 16px;
-
-        img {
-          width: 25vw;
-          height: auto;
-
-          @media (max-width: $tablet) {
-            width: 60vw;
-          }
+    li{
+      margin-left: 16px;
+      img{
+        width: 25vw;
+        height: auto;
+        @media (max-width: $tablet){
+        width: 60vw;
+        
         }
       }
     }
   }
+}
 }
 
 .detall-f {
@@ -438,7 +352,7 @@
   text-align: center;
   align-items: center;
   margin-top: 5vh;
-
+  
   &__h2 {
     content: " |";
     font-size: 2.3rem;
@@ -448,8 +362,8 @@
     overflow: hidden;
     animation: creixement 5s steps(40, end) infinite, animacioArcoiris 5s infinite;
 
-    @media (max-width: $tablet) {
-      font-size: 1.4rem;
+    @media (max-width:$tablet) {
+        font-size: 1.4rem;
     }
   }
 
@@ -462,37 +376,37 @@
     grid-template-rows: repeat(3, 1fr);
     max-width: 80vh;
 
-    @media (max-width: $tablet) {
+    @media (max-width:$tablet) {
       display: flex;
       flex-direction: column;
-
-      .detall-f__div__Portada {
+      .detall-f__div__Portada{
         width: 300px;
         height: 300px;
       }
-
-      .detall-f__div__Portada__imatge {
+      .detall-f__div__Portada__imatge{
         width: 0;
         height: 0;
       }
 
-      .detall-f__div__Portada__link {
+      .detall-f__div__Portada__link{
         width: 0;
         height: 0;
       }
 
-      .detall-f__div__imatges {
+     
+
+      .detall-f__div__imatges{
         background-color: transparent;
         width: 0;
         height: 0;
 
-        &__imatge {
+        &__imatge{
           width: 0;
           height: 0;
         }
       }
 
-      .detall-f__div__Portada__iframe {
+      .detall-f__div__Portada__iframe{
         opacity: 1;
         z-index: 12;
         transform: scale(1.05);
@@ -501,50 +415,54 @@
         width: 100%;
         height: auto;
       }
+
+
     }
 
     &__Portada {
-      &__iframe {
+
+      &__iframe{
         z-index: 2;
         max-width: 0;
         max-height: 0;
         transform: scale(0);
-        transition: transform 0.5s ease-in-out;
+        transition: transform  .5s ease-in-out;
+        .detall-f__div__Portada__iframe{
+        @media (max-width: $tablet) {
+          z-index: 12;
+          width: 80%;
+          max-height: 80%;
+          transform: scale(110%);
+          transition: transform .5s ease-in-out;
 
-        .detall-f__div__Portada__iframe {
-          @media (max-width: $tablet) {
-            z-index: 12;
-            width: 80%;
-            max-height: 80%;
-            transform: scale(110%);
-            transition: transform 0.5s ease-in-out;
+          .detall-f__div__Portada__imatge {
+            opacity: 0;
+            transform: scale(0);
+            z-index: 0;
+            width: 0;
+            height: 0;
+          }
 
-            .detall-f__div__Portada__imatge {
-              opacity: 0;
-              transform: scale(0);
-              z-index: 0;
-              width: 0;
-              height: 0;
-            }
-
-            .detall-f__div__Portada__link {
-              opacity: 0;
-              transform: scale(0);
-              z-index: 0;
-              width: 0;
-              height: 0;
-            }
+          .detall-f__div__Portada__link{
+                        opacity: 0;
+            transform: scale(0);
+            z-index: 0;
+            width: 0;
+            height: 0;
           }
         }
       }
-
+      }
       &__imatge {
         z-index: 4;
         max-width: 40vh;
         height: auto;
         max-height: 40vh;
         transform: scale(3);
-        transition: transform 0.5s ease;
+        transition: transform .5s ease;
+        
+      
+
       }
     }
 
@@ -554,36 +472,40 @@
         max-height: 20vh;
         opacity: 0;
         background-color: transparent;
-        animation: rotarImatges 5s infinite linear;
+        animation: rotarImatges 5s infinite linear; 
         transform-origin: center;
       }
     }
   }
 
-  &:hover {
-    .detall-f__div__Portada__iframe {
-      @media (max-width: $tablet) {
-        z-index: 12;
-        width: 80%;
-        height: auto;
-        max-height: 80%;
-        transform: scale(110%);
-        transition: transform 0.5s ease;
-      }
-    }
+  &:hover{
+   .detall-f__div__Portada__iframe{
 
-    .detall-f__div__imatges__imatge {
+    @media (max-width: $tablet) {
+      z-index: 12;
+      width: 80%;
+      height: auto;
+      max-height: 80%;
+      transform: scale(110%);
+      transition: transform .5s ease;
+
+
+    }
+    }
+    .detall-f__div__imatges__imatge{
       opacity: 1;
       transform: scale(80%);
     }
 
-    .detall-f__div__Portada {
+    .detall-f__div__Portada{
+      
+
       .detall-f__div__Portada__imatge {
         opacity: 0;
         transform: scale(0);
         z-index: 0;
       }
-
+    
       .detall-f__div__Portada__iframe {
         opacity: 1;
         transform: scale(210%);
@@ -592,6 +514,7 @@
         max-width: 80vh;
         max-height: 80vh;
         transform: translate(-25%, -17.20%);
+      
       }
     }
   }
@@ -600,38 +523,36 @@
 .imatgeDestacada {
   width: 100%;
   height: auto;
-
   img {
-    width: 100px;
-    height: auto;
-    object-fit: cover;
+      width: 100px;
+      height: auto;
+      object-fit: cover;
   }
 }
 
-.imatgeDestacada__detall {
-  width: 100wv;
+.imatgeDestacada__detall{
+  margin: 0;
+    width: 100vw;
   height: auto;
 }
 
-.card__img,
-.novelty-image,
-.special-icon {
+.card__img, .novelty-image, .special-icon {
   width: 100%;
   height: auto;
 }
 
-.h1__home {
+.h1__home{
   text-align: center;
 }
 
-.concert .concert-text .blue__color {
+
+.concert .concert-text .blue__color{
   color: rgb(30, 30, 185);
   font-family: $font-family-Comic;
   font-weight: bolder;
   font-size: 1.3vw;
-
-  &:hover {
-    color: green;
+  &:hover{
+    color:green;
     font-weight: bold;
   }
 }
