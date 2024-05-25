@@ -22,9 +22,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 15vh;
-  div{
-    margin-left: 7.5vw;
-  }
+  
   h3{
     transform: translateX(-30%);
   }
@@ -41,8 +39,6 @@
   &.concert-reversed {
     flex-direction: row-reverse;
     text-align: start;
-
-    
     a, p{
       transform: translateX(30%);
       display:flex;
@@ -71,7 +67,7 @@
 
 
   .concert-image {
-    width: 40vw; 
+    width: 35vw; 
     height: auto; 
     object-fit: cover; 
     transform: rotate(-5deg); /* Inclinació */
