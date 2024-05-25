@@ -1,63 +1,114 @@
-footer{
-  background-color: #333;
-  width: 100%;
-  
-  display: flex;
-  flex-direction: column;
-}
+@import "utility";
+@import "variables";
+
 .footer {
+    margin-top: 3vh;
+    background-color: #2A394F;
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
 
-    color: #fff;
-    padding: 20px 0;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  
-    .footer__container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
-      margin: auto;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
-  
-    .footer__info {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      text-align: center;
-      width: 300px;
-  
-      .footer__info__container {
-        margin-right: 10vh ;
-      }
-  
-      .footer--logo {
-        width: 100px;
-        height: auto;
-      }
-  
-      .footer__nav {
-        ul {
-          list-style-type: none;
-          display: flex;
-  
-          li {
-            margin: 0 10px;
-  
-            .navegacio__link {
-              text-decoration: none;
-              color: #fff;
-  
-              &:hover {
-                color: #ccc;
-              }
+
+    &__info {
+        display: flex;
+        text-align: center;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+
+        &__container {
+            margin-left: 5vw;
+
+            .footer--logo {
+                width: 100%;        
+                max-width: 100px;    
+                height: auto;       
+                margin-right: 20px;
             }
-          }
         }
-      }
     }
-  
 
-  }
-  
+    &__nav {
+        margin-left: 20vw;
+        ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            justify-content: space-between;
+            
+
+            li {
+                margin-left: 5vw;
+                padding: 1vh 0;
+                font-size: 1.2em;
+                .navegacio__link {
+                    color: white;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: #206bdb;
+                    }
+                }
+            }
+        }
+    }
+
+    &__author {
+        width: 100%;
+        text-align: left;
+        margin-top: 10px;
+        font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 991px) {
+    .footer {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flex a vertical */
+        justify-content: center;
+        text-align: center;
+        padding: 20px 0; /* Añade un poco de padding arriba y abajo */
+
+        &__author {
+
+            font-size: 2.5vw;
+        }
+    }
+
+    .footer__container {
+        flex-direction: column;
+    }
+
+    .footer__info {
+        flex-direction: column;
+    }
+
+    .footer__info__container {
+        justify-content: center; /* Asegúrate de que este contenedor también esté centrado */
+    }
+
+    .footer__nav {
+        margin: 20px 0 0 0; /* Añade un margen arriba para separarlo de otros elementos si es necesario */
+    }
+
+    .footer__nav ul {
+        flex-direction: column;
+    }
+
+    .footer__nav ul li {
+        padding: 10px 0; /* Añade más padding para mejorar la tocabilidad en dispositivos móviles */
+    }
+
+    .navegacio__link {
+        text-align: center; /* Asegura que el texto también esté centrado dentro de los enlaces */
+    }
+}
+

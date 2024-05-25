@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "start": "parcel src/index.html --open",
-    "build": "parcel build src/index.html --dist-dir dist",
+    "build": "npm run clean && parcel build src/index.html --dist-dir dist",
     "dev": "parcel src/index.html --open",
     "clean": "rimraf dist .parcel-cache",
     "lint": "eslint src/**/*.js",
