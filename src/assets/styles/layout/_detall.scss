@@ -2,22 +2,16 @@
 @import "variables";
 @import "home";
 @import "navegacio";
-
-
 .container {
   width:80vw;
   
   margin: 0 auto;
   padding: 20px;
-
   @media (max-width: $tablet) {
     
     text-align: center;
   }
 }
-
-
-
 .concert {
   display: flex;
   align-items: center;
@@ -35,7 +29,6 @@
       transform: translateX(0);
     }
   }
-
   &.concert-reversed {
     flex-direction: row-reverse;
     text-align: start;
@@ -56,16 +49,11 @@
       h3{
         transform: translateX(0);
       }
-
       a, p{
         transform: translateX(0);
-
       }
     }
   }
-
-
-
   .concert-image {
     width: 35vw; 
     height: auto; 
@@ -79,13 +67,11 @@
   
     }
   }
-
   .concert-text {
     width: 60%; 
     h2 {
       margin-bottom: 1vh;
     }
-
     a {
       color: $main-color;
       text-decoration: none;
@@ -101,38 +87,28 @@
 .detall-a{
 margin-top: 100px ;
 }
-
 .detall-d{
   font-family: 'Comic Neue', sans-serif;
   max-width: 80%;
   margin: 0 auto 1rem auto;
   padding: 2rem;
-
   h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
-
     }
-
     details {
       border: $dark-color solid 0.3rem;
       margin: 0 auto 3rem auto;
       padding: 0.4rem;
       border-radius: 2rem;
       box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.8);
-
-
           &:hover {
             box-shadow: 0.2rem 0.2rem 1.2rem red;
           }
-
-
-
           summary {
             padding: 1.2rem;
           }
-
           p {
             padding: 0.1rem;
             line-height: 1.2rem;
@@ -140,12 +116,8 @@ margin-top: 100px ;
             padding-left: 1.6rem;
             padding-bottom: .4rem;
           }
-
           }
-
-
     }
-
 .detall__concerts{
   background-color: lightgray;
   padding: 5rem 0;
@@ -181,7 +153,6 @@ margin-top: 100px ;
       padding: 0 1rem;
       color: rgb(0, 0, 0);
       font-weight: bold;
-
       &__preu{
         background-color: $main-color;
         padding: 0.5rem;
@@ -190,7 +161,6 @@ margin-top: 100px ;
         border-radius: 1rem;
         margin-left: 2.5vw;
       }
-
       &__data{
         font-size: 2rem;
       }
@@ -200,7 +170,6 @@ margin-top: 100px ;
       align-items: stretch;
     }
   
-
   
     &__imagen{
       width: 100%;
@@ -231,16 +200,12 @@ margin-top: 100px ;
     }
   
   }
-
   &__grid{
     display: grid;
     align-items: stretch;
     grid-template-columns: repeat(3,1fr);
     gap: 1.5rem;
-
-
       margin: 0 3rem;
-
     @media (max-width: $tablet) {
       grid-template-columns: repeat(2,1fr);
       gap: 1rem;
@@ -249,34 +214,25 @@ margin-top: 100px ;
       margin: 0 auto;
       
     }
-
     @media (max-width: 746px) {
       grid-template-columns:1fr;
       gap: 1rem;
       
-
        
       
       .detall__concerts__grid{
         width: 100%;
       }
     }
-
   }
 }
-
-
-
 .fa-ticket{
   margin: 0 2rem;
 }
-
 .llistat__disc{
   h2{
     margin-top: 2rem;
-
   }
-
   ul{
     display: flex;
   flex-direction: row-reverse;
@@ -292,38 +248,27 @@ margin-top: 100px ;
       width: 80vw;
       height: auto;
     }
-
     @media (max-width: $phone) {
       width: 70vw;
       height: auto;
       
     }
   }
-
   @media (max-width: $phone) {
     flex-direction: column;
     
   }
 }
-
-
-
-
-
 .detall-g{
   
-
   &__div{ 
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   text-align: center;
   align-items: center;
-
   &__ul{
     display: flex;
-
     @media (max-width: $tablet) {
       flex-direction: column;
       li{
@@ -345,7 +290,6 @@ margin-top: 100px ;
   }
 }
 }
-
 .detall-f {
   display: grid;
   justify-content: center;
@@ -361,12 +305,10 @@ margin-top: 100px ;
     width: 80%;
     overflow: hidden;
     animation: creixement 5s steps(40, end) infinite, animacioArcoiris 5s infinite;
-
     @media (max-width:$tablet) {
         font-size: 1.4rem;
     }
   }
-
   &__div {
     display: grid;
     justify-content: center;
@@ -375,7 +317,6 @@ margin-top: 100px ;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     max-width: 80vh;
-
     @media (max-width:$tablet) {
       display: flex;
       flex-direction: column;
@@ -387,25 +328,20 @@ margin-top: 100px ;
         width: 0;
         height: 0;
       }
-
       .detall-f__div__Portada__link{
         width: 0;
         height: 0;
       }
-
      
-
       .detall-f__div__imatges{
         background-color: transparent;
         width: 0;
         height: 0;
-
         &__imatge{
           width: 0;
           height: 0;
         }
       }
-
       .detall-f__div__Portada__iframe{
         opacity: 1;
         z-index: 12;
@@ -415,12 +351,8 @@ margin-top: 100px ;
         width: 100%;
         height: auto;
       }
-
-
     }
-
     &__Portada {
-
       &__iframe{
         z-index: 2;
         max-width: 0;
@@ -434,7 +366,6 @@ margin-top: 100px ;
           max-height: 80%;
           transform: scale(110%);
           transition: transform .5s ease-in-out;
-
           .detall-f__div__Portada__imatge {
             opacity: 0;
             transform: scale(0);
@@ -442,7 +373,6 @@ margin-top: 100px ;
             width: 0;
             height: 0;
           }
-
           .detall-f__div__Portada__link{
                         opacity: 0;
             transform: scale(0);
@@ -462,10 +392,8 @@ margin-top: 100px ;
         transition: transform .5s ease;
         
       
-
       }
     }
-
     &__imatges {
       &__imatge {
         max-width: 20vh;
@@ -477,10 +405,8 @@ margin-top: 100px ;
       }
     }
   }
-
   &:hover{
    .detall-f__div__Portada__iframe{
-
     @media (max-width: $tablet) {
       z-index: 12;
       width: 80%;
@@ -488,18 +414,14 @@ margin-top: 100px ;
       max-height: 80%;
       transform: scale(110%);
       transition: transform .5s ease;
-
-
     }
     }
     .detall-f__div__imatges__imatge{
       opacity: 1;
       transform: scale(80%);
     }
-
     .detall-f__div__Portada{
       
-
       .detall-f__div__Portada__imatge {
         opacity: 0;
         transform: scale(0);
@@ -519,7 +441,6 @@ margin-top: 100px ;
     }
   }
 }
-
 .imatgeDestacada {
   width: 100%;
   height: auto;
@@ -529,27 +450,21 @@ margin-top: 100px ;
       object-fit: cover;
   }
 }
-
 .imatge__principal{
   width: 100vw;
 }
-
 .imatgeDestacada__detall{
   margin: 0;
   width: 100vw;  
   height: auto;
 }
-
 .card__img, .novelty-image, .special-icon {
   width: 100%;
   height: auto;
 }
-
 .h1__home{
   text-align: center;
 }
-
-
 .concert .concert-text .blue__color{
   color: rgb(30, 30, 185);
   font-family: $font-family-Comic;
@@ -561,3 +476,21 @@ margin-top: 100px ;
   }
 }
 
+.detall-a {
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .imatgeDestacada__detall {
+    width: 100%;
+    height: auto;
+  }
+
+  .detall__concerts__concert__imagen {
+    width: 100%;
+    height: auto;
+  }
+
+}
