@@ -4171,19 +4171,34 @@ h2 {
 .enlaces-b:nth-child(even) {
   background-color: #f9f9f9; }
 
-.enlaces-b__Imatge img {
+.enlaces-b__container {
+  width: 400px;
+  max-width: 30vw;
+  height: 500px; }
+
+@media (max-width: 1080px) {
+  .enlaces-b__container {
+    width: 300px;
+    height: 350px; } }
+
+@media (max-width: 600px) {
+  .enlaces-b__container {
+    width: 200px;
+    height: 250px; } }
+
+.enlaces-b__container__Imatge {
   margin: 12px;
   width: 300px;
   max-width: 25vw;
   height: 400px; }
 
 @media (max-width: 1080px) {
-  .enlaces-b__Imatge img {
+  .enlaces-b__container__Imatge {
     width: 250px;
     height: 300px; } }
 
 @media (max-width: 600px) {
-  .enlaces-b__Imatge img {
+  .enlaces-b__container__Imatge {
     width: 150px;
     height: 200px; } }
 
