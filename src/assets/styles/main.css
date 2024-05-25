@@ -4203,7 +4203,20 @@ h2 {
     height: 200px; } }
 
 .enlaces-b__text {
+  width: 400px;
+  max-width: 30vw;
+  height: 500px;
   color: #000000; }
+
+@media (max-width: 1080px) {
+  .enlaces-b__text {
+    width: 300px;
+    height: 350px; } }
+
+@media (max-width: 600px) {
+  .enlaces-b__text {
+    width: 200px;
+    height: 250px; } }
 
 .enlaces-b__text p {
   font-family: 'Times New Roman', Times, serif;

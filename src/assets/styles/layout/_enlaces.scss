@@ -80,6 +80,19 @@
     }
 } 
     &__text {
+
+        width: 400px;
+        max-width: 30vw;
+        height: 500px;
+        @media (max-width: $tablet) {
+            width: 300px;
+            height: 350px;
+        }
+
+        @media (max-width: $phone) {
+            width: 200px;
+            height: 250px;
+        }
         color: #000000; // Negre per a major contrast
         p {
             font-family: 'Times New Roman', Times, serif;
