@@ -12,7 +12,16 @@
         width: 100%;
         p {
             line-height: 1.5rem;
-            margin: 1rem
+            margin: 1rem;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.1rem;
+
+            @media (max-width: $phone) {
+                font-size: 0.8rem;
+                margin: 0.3rem;
+                line-height: 1rem;
+            }
+
         }
     }
 
