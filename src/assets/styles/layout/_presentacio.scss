@@ -4,7 +4,10 @@
 @import "navegacio";
 @import "variables";
 
-
+.llistat-discs-imatges{
+  width: 100%;
+  height: auto;
+}
 .presentacio-a {
   display: grid;
   justify-content: center;
