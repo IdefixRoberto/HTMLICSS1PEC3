@@ -2374,6 +2374,7 @@ h2 {
 
 .concert .concert-image {
   width: 35vw;
+  aspect-ratio: 16 / 9;
   height: auto;
   object-fit: cover;
   transform: rotate(-5deg);
@@ -2482,7 +2483,8 @@ h2 {
 
 .detall__concerts__concert__imagen {
   width: 100%;
-  height: 90%; }
+  height: auto;
+  aspect-ratio: 16 / 9; }
 
 .detall__concerts__concert__descripcio {
   color: #191919;
@@ -2734,7 +2736,8 @@ h2 {
 
 .card__img, .novelty-image, .special-icon {
   width: 100%;
-  height: auto; }
+  height: auto;
+  aspect-ratio: 16 / 9; }
 
 .h1__home {
   text-align: center; }
@@ -3368,6 +3371,9 @@ h2 {
 
 .presentacio-a p {
   margin-top: 2.5vh; }
+
+.presentacio-a .__text p {
+  margin: 2.5vh; }
 
 .presentacio-b {
   display: grid;
@@ -4018,6 +4024,7 @@ h2 {
   margin: 2rem 20%; }
 
 .enlaces-c .text-center {
+  justify-content: center;
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px; }
