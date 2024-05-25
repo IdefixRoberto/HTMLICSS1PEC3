@@ -15,4 +15,11 @@
   list-style: none;
 }
 
+.all-logo{
+  width: 100px;
+  height: auto;
 
+  @media (max-width: 991px) {
+    width: 70px;
+  }
+}
