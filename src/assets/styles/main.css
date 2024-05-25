@@ -1549,6 +1549,10 @@ h2 {
   justify-content: center;
   padding: 20px; }
 
+@media (max-width: 1080px) {
+  .categoria__contenidor {
+    display: none; } }
+
 .card__container {
   position: relative;
   width: 25vw;
@@ -1557,8 +1561,13 @@ h2 {
   overflow: hidden;
   border-radius: 10px; }
 
+.card__container img {
+  width: 100%;
+  height: auto; }
+
 @media (max-width: 1080px) {
   .card__container {
+    transform: translateX(0%);
     width: 80%; } }
 
 .card__container:hover .concert-info {
@@ -1571,8 +1580,12 @@ h2 {
   width: 100%;
   height: auto; }
 
-.card__img {
+.card__article img {
   width: 100%;
+  height: auto; }
+
+.card__img {
+  width: inherit;
   height: auto;
   object-fit: cover;
   transition: all 0.5s ease; }

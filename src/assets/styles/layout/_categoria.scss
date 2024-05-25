@@ -58,7 +58,6 @@
 
 
         @media (max-width: $tablet){
-          display: none;
             grid-template-columns: 1fr;
             figure{
               margin:0;
@@ -620,7 +619,10 @@
   gap: 20px;
   justify-content: center;
   padding: 20px;
-
+  @media (max-width: $tablet) {
+    
+    display: none
+  }
 
 }
 
@@ -632,8 +634,13 @@
   overflow: hidden;
   border-radius: 10px;
 
+  img{
+    width: 100%;
+    height: auto;
+  }
+
   @media (max-width: $tablet) {
-    
+    transform: translateX(0%);
     width: 80%;
   }
 
@@ -650,10 +657,17 @@
   display: flex;
   width: 100%;
   height: auto;
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+
+
 }
 
 .card__img {
-  width: 100%;
+  width: inherit;
   height: auto;
   object-fit: cover;
   transition: all 0.5s ease;
