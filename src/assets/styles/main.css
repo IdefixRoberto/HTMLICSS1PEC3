@@ -2915,7 +2915,7 @@ h2 {
 
 .detall__concerts__concert__descripcio {
   color: #191919;
-  font-family: "Comic Neue", "Times New Roman", serif;
+  font-family: 'Comic Neue', sans-serif;
   font-weight: 800;
   font-size: 2.4vh; }
 
@@ -3172,7 +3172,7 @@ h2 {
 
 .concert .concert-text .blue__color {
   color: #1e1eb9;
-  font-family: "Comic Neue", "Times New Roman", serif;
+  font-family: 'Comic Neue', sans-serif;
   font-weight: bolder;
   font-size: 1.3vw; }
 
