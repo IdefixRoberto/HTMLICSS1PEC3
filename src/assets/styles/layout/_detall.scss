@@ -536,8 +536,9 @@ margin-top: 100px ;
 
 .imatgeDestacada__detall{
   margin: 0;
-  width: 100vw;  
+  width: 100%;  
   height: auto;
+  aspect-ratio: 3 / 2;
 }
 
 .card__img, .novelty-image, .special-icon {

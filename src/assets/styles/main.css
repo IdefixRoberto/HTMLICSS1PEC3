@@ -2729,8 +2729,9 @@ h2 {
 
 .imatgeDestacada__detall {
   margin: 0;
-  width: 100vw;
-  height: auto; }
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2; }
 
 .card__img, .novelty-image, .special-icon {
   width: 100%;
