@@ -116,10 +116,16 @@
         li {
           
           img {
-            width: 100%;
+            width: 100px;
+            height: auto;
             max-width: 7.5vw; 
             height: auto; 
             transition: transform 0.2s ease;
+
+            @media (max-width:$phone) {
+              width: 500px;
+              height: auto;
+            }
           }
   
           &:hover img {
@@ -283,3 +289,4 @@
   .h1__home span {
     font-size: calc(1em + 0.3vw);
 }
+
