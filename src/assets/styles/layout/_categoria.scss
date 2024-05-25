@@ -36,6 +36,19 @@
     // Secció 1
     &-a{
 
+      .special-icon{
+        width: 650px;
+        height: auto;
+
+        @media (max-width: $tablet){
+          width: 450px;
+        }
+
+        @media (max-width:  $tablet){
+          width: 80vw;
+        }
+      }
+
       padding:  0;
 
       display: grid;
@@ -52,7 +65,7 @@
         justify-content: center;
         text-align: center;
         align-items: center;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 2vh;
         width: 100%;
 
@@ -62,28 +75,17 @@
             figure{
               margin:0;
               padding: 0;
-              img{
-                width: 100%;
-                height: auto;
-              }
+
             }
         }
   
         figure{
           margin-bottom: 4rem;
           padding: 1rem;
-          img{
-            width: 18vw;
-            height:auto;
 
 
-            @media (max-width: $tablet) {
-              width: 80vw;
-            }
-            
-            
           }
-        }
+        
                 
       }
   
@@ -829,3 +831,4 @@
 .card__container:hover .card__data__text {
   transform: translateY(-100%); /* Mou el contenidor a la vista */
 }
+
