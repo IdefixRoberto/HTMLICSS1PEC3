@@ -2749,6 +2749,18 @@ h2 {
   color: green;
   font-weight: bold; }
 
+.detall-a img {
+  width: 100%;
+  height: auto; }
+
+.detall-a .imatgeDestacada__detall {
+  width: 100%;
+  height: auto; }
+
+.detall-a .detall__concerts__concert__imagen {
+  width: 100%;
+  height: auto; }
+
 * {
   box-sizing: border-box;
   margin: 0;
