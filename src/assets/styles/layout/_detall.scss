@@ -55,7 +55,7 @@
     }
   }
   .concert-image {
-    width: 35vw; 
+    width: 25vw; 
     height: auto; 
     object-fit: cover; 
     transform: rotate(-5deg); /* Inclinació */
@@ -68,7 +68,8 @@
     }
   }
   .concert-text {
-    width: 60%; 
+    width: 40%;
+    margin: 10%; 
     h2 {
       margin-bottom: 1vh;
     }
