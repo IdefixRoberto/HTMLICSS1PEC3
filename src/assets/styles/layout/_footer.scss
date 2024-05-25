@@ -70,6 +70,15 @@
 }
 
 @media (max-width: 991px) {
+    header{
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flex a vertical */
+        justify-content: center;
+        text-align: center;
+        padding: 20px 0; /* Añade un poco de padding arriba y abajo */
+
+    }
+
     .footer {
         display: flex;
         flex-direction: column; /* Cambia la dirección del flex a vertical */

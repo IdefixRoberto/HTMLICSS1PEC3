@@ -1,117 +1,123 @@
 .header-container{
-    max-width: 1100px; //Per a evitar que es desborde en pantalles molt grans
-    margin: 0 auto;
-  }
-  
-  .header-back{
-    padding: 60px 0;
-    background-color: #2A394F;
-  }
-  
-  .header-menu{
-    position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    display: flex;
-  
-    align-items: center;
-    justify-content: space-between;
-    z-index: 32;
-    label{
-      cursor: pointer;
-      display: none;
-    }
-  
-    .navbar ul li{
-      position: relative;
-      float: left; //Els enllaços es posicionen a l'esquerra
-      display: flex;
-      a{
-        font-size: 18px;
-        padding: 20px;
-        color: #FFFF;
-        &:hover{
-          color: #206bdb
-        }
-      }
-    }
-  }
-  
-  #menu-navegador{
+  max-width: 1100px; //Per a evitar que es desborde en pantalles molt grans
+  margin: 0 auto;
+}
+
+.header-back{
+  padding: 60px 0;
+  background-color: #2A394F;
+}
+
+.header-menu{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  z-index: 32;
+  label{
+    cursor: pointer;
     display: none;
   }
-  
-  @media(max-width: 991px){
-  
-    .header-menu{
-      z-index: 121;
-      padding: 30px;
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      label{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        display: initial;
-      }
-    }
-  
-    .header-back{
-      padding: 60px;
-    }
-  
-    .header-menu .navbar 
-    {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background-color: #2A394F;
-      display: none;
-      
-      
-      ul{ 
-        
-        
-        li {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      a{
-        text-align: center;
-        justify-content: center;
-        align-items: center;
+
+  .navbar ul li{
+    position: relative;
+    float: left; //Els enllaços es posicionen a l'esquerra
+    display: flex;
+    a{
+      font-size: 18px;
+      padding: 20px;
+      color: #FFFF;
+      &:hover{
+        color: #206bdb
       }
     }
   }
-  }
-    
-    #menu-navegador:checked ~ .navbar{
+}
+
+#menu-navegador{
+  display: none;
+}
+
+@media(max-width: 991px){
+.header__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  
+}
+  .header-menu{
+    z-index: 121;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    label{
+      display: flex;
+      justify-content: center;
+      text-align: center;
       display: initial;
     }
   }
-  
-  .menu-icono{
-    color: whitesmoke;
-  
+
+  .header-back{
+    padding: 60px;
   }
-  
-  
-  .header-logo {
-    width: 100px;  
-    height: auto;  
-  }
-  
-  
-  
-  @media (max-width: 991px) {
-    .header-logo {
-        width: 80px;
-        position: absolute;
-        left: 4.5vh;
-        top: 1.8vh;
+
+  .header-menu .navbar 
+  {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #2A394F;
+    display: none;
+    
+    
+    ul{ 
+      
+      
+      li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    a{
+      text-align: center;
+      justify-content: center;
+      align-items: center;
     }
   }
+}
+}
+  
+  #menu-navegador:checked ~ .navbar{
+    display: initial;
+  }
+}
+
+.menu-icono{
+  color: whitesmoke;
+
+}
+
+
+.header-logo {
+  width: 100px;  
+  height: auto;  
+}
+
+
+
+@media (max-width: 991px) {
+  .header-logo {
+      width: 80px;
+      position: absolute;
+      left: 4.5vh;
+      top: 1.8vh;
+  }
+}
