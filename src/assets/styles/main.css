@@ -2724,6 +2724,9 @@ h2 {
   height: auto;
   object-fit: cover; }
 
+.imatge__principal {
+  width: 100vw; }
+
 .imatgeDestacada__detall {
   margin: 0;
   width: 100vw;
