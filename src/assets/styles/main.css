@@ -4145,6 +4145,8 @@ h2 {
   margin: 1rem; }
 
 .enlaces-b {
+  width: 80%;
+  margin: 0 10%;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -4171,9 +4173,19 @@ h2 {
 
 .enlaces-b__Imatge img {
   margin: 12px;
-  width: 90%;
+  width: 300px;
   max-width: 25vw;
-  height: auto; }
+  height: 400px; }
+
+@media (max-width: 1080px) {
+  .enlaces-b__Imatge img {
+    width: 250px;
+    height: 300px; } }
+
+@media (max-width: 600px) {
+  .enlaces-b__Imatge img {
+    width: 150px;
+    height: 200px; } }
 
 .enlaces-b__text {
   color: #000000; }

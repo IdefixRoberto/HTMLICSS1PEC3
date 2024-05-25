@@ -19,6 +19,9 @@
 }
 
 .enlaces-b {
+
+    width: 80%;
+    margin: 0 10%;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -46,9 +49,18 @@
     &__Imatge {
         img {
             margin: 12px;
-            width: 90%;
+            width: 300px;
             max-width: 25vw;
-            height: auto;
+            height: 400px;
+            @media (max-width: $tablet) {
+                width: 250px;
+                height: 300px;
+            }
+
+            @media (max-width: $phone) {
+                width: 150px;
+                height: 200px;
+            }
         }
     }
 
