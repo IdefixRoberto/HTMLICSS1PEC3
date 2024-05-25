@@ -10,14 +10,18 @@
 
     &__container{
         width: 100%;
+
+        @media (max-width: $phone){
+            height: auto;
+        }
         p {
             line-height: 1.5rem;
             margin: 1rem;
 
-            @media (max-width: 480px) {
-                line-height: 1.1rem;
+            @media (max-width: $phone) {
+                line-height: normal;
 
-                font-size: 0.8rem; 
+                font-size: 0.7rem; 
                 margin: 0.3rem; 
         }
     }
