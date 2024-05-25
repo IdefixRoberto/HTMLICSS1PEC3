@@ -48,6 +48,24 @@
     tr:nth-child(even) {
         background-color: #e8e8e8; // Incrementat el contrast per visibilitat millorada
     }
+
+    tr{
+        margin: 12px;
+            width: 350px;
+            max-width: 25vw;
+            height: 400px;
+            @media (max-width: $tablet) {
+                width: 300;
+                height: 350px;
+                margin: 6px;
+            }
+
+            @media (max-width: $phone) {
+                width: 200px;
+                height: 250px;
+                margin: 3px;
+            }
+    }
     display: grid;
     justify-content: center;
     align-items: center;
