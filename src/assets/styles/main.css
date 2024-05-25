@@ -4227,3 +4227,7 @@ h2 {
   font-family: 'Comic Neue';
   src: url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
   font-display: swap; }
+
+img {
+  width: 100%;
+  height: auto; }
