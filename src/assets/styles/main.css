@@ -443,9 +443,7 @@ h2 {
   .home-imatge {
     max-height: 30vh; }
   .home-imatge__image--back {
-    width: 100%;
-    height: 60%;
-    animation: shrinkDisappear 6s forwards; }
+    display: none; }
   @keyframes shrinkDisappear {
     0% {
       height: 60%;
@@ -1257,9 +1255,7 @@ h2 {
   .home-imatge {
     max-height: 30vh; }
   .home-imatge__image--back {
-    width: 100%;
-    height: 60%;
-    animation: shrinkDisappear 6s forwards; }
+    display: none; }
   @keyframes shrinkDisappear {
     0% {
       height: 60%;
@@ -2441,9 +2437,7 @@ h2 {
   .home-imatge {
     max-height: 30vh; }
   .home-imatge__image--back {
-    width: 100%;
-    height: 60%;
-    animation: shrinkDisappear 6s forwards; }
+    display: none; }
   @keyframes shrinkDisappear {
     0% {
       height: 60%;
@@ -3620,9 +3614,7 @@ h2 {
   .home-imatge {
     max-height: 30vh; }
   .home-imatge__image--back {
-    width: 100%;
-    height: 60%;
-    animation: shrinkDisappear 6s forwards; }
+    display: none; }
   @keyframes shrinkDisappear {
     0% {
       height: 60%;
@@ -4563,9 +4555,7 @@ h2 {
   .home-imatge {
     max-height: 30vh; }
   .home-imatge__image--back {
-    width: 100%;
-    height: 60%;
-    animation: shrinkDisappear 6s forwards; }
+    display: none; }
   @keyframes shrinkDisappear {
     0% {
       height: 60%;
@@ -4686,7 +4676,7 @@ h2 {
 
 .enlaces-a p {
   line-height: 1.5rem;
-  margin-bottom: 1rem; }
+  margin: 1rem; }
 
 .enlaces-b {
   display: grid;

@@ -152,9 +152,7 @@
       max-height: 30vh;
     }
     .home-imatge__image--back {
-      width: 100%;  
-      height: 60%;
-      animation: shrinkDisappear 6s forwards; 
+      display: none;
   }
   
   @keyframes shrinkDisappear {
