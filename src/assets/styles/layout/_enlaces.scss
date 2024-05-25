@@ -1,14 +1,21 @@
-@import "utility";
-@import "variables";
-@import "home";
 
 .enlaces-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
     margin: 0 auto;
-    width: 60%;
-    p {
-        line-height: 1.5rem;
-        margin: 1rem
+    width: 80%;
+
+    &__container{
+        width: 100%;
+        p {
+            line-height: 1.5rem;
+            margin: 1rem
+        }
     }
+
 }
 
 .enlaces-b {
@@ -56,8 +63,8 @@
 }
 
 .enlaces-c {
-    width: 60%;
-    margin: 2rem 20%;
+    width: 80%;
+    margin: 2rem 10%;
     .text-center {
         justify-content: center;
         text-align: center;
