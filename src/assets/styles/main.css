@@ -2373,7 +2373,7 @@ h2 {
     transform: translateX(0); } }
 
 .concert .concert-image {
-  width: 35vw;
+  width: 500px;
   height: auto;
   object-fit: cover;
   transform: rotate(-5deg);
