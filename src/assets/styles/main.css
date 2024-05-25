@@ -1117,12 +1117,8 @@ h2 {
   align-items: center; }
 
 .categoria-a .special-icon {
-  width: 650px;
+  width: 450px;
   height: auto; }
-
-@media (max-width: 1080px) {
-  .categoria-a .special-icon {
-    width: 450px; } }
 
 @media (max-width: 1080px) {
   .categoria-a .special-icon {

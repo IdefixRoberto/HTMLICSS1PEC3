@@ -37,16 +37,14 @@
     &-a{
 
       .special-icon{
-        width: 650px;
+        width: 450px;
         height: auto;
-
-        @media (max-width: $tablet){
-          width: 450px;
-        }
 
         @media (max-width:  $tablet){
           width: 80vw;
         }
+
+
       }
 
       padding:  0;
