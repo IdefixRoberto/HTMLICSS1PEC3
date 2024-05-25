@@ -2374,7 +2374,6 @@ h2 {
 
 .concert .concert-image {
   width: 35vw;
-  aspect-ratio: 16 / 9;
   height: auto;
   object-fit: cover;
   transform: rotate(-5deg);
@@ -2483,8 +2482,7 @@ h2 {
 
 .detall__concerts__concert__imagen {
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9; }
+  height: 90%; }
 
 .detall__concerts__concert__descripcio {
   color: #191919;
@@ -2736,8 +2734,7 @@ h2 {
 
 .card__img, .novelty-image, .special-icon {
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9; }
+  height: auto; }
 
 .h1__home {
   text-align: center; }
