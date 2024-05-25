@@ -58,6 +58,7 @@
 
 
         @media (max-width: $tablet){
+          display: none;
             grid-template-columns: 1fr;
             figure{
               margin:0;
