@@ -2811,7 +2811,7 @@ h2 {
   object-fit: cover; }
 
 .imatgeDestacada__detall {
-  width: 100%;
+  width: 100wv;
   height: auto; }
 
 .card__img,
