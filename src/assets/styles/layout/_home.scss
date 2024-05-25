@@ -1,205 +1,174 @@
 @import "utility";
 @import "variables";
 
-
 .home-imatge .text__gira .h1__home {
-    font-size: calc(5.5vw );
+    font-size: calc(5.5vw);
     margin-top: 3%;
 }
-
 
 .home {  
     // Estils generals per tot el main
 
-    h1{
+    h1 {
         text-align: center;
         margin-top: 5vh;
     }
 
-    &__historia__text{
+    &__historia__text {
         padding: 0 20%;
         justify-content: center;
         align-items: center;
         display: grid;
         line-height: 1.5;
         text-align: justify;
-        @media (max-width:$tablet) {
+
+        @media (max-width: $tablet) {
             padding: 0 10%;
         }
-        @media (max-width:$phone) {
+        @media (max-width: $phone) {
             padding: 0 5%;
         }
 
-        p{
-            margin: 1.5vh 0 ;
+        p {
+            margin: 1.5vh 0;
         }
     }
   
     &__historia, &__videos, &__xarxes {
-      margin-bottom: 5vh; // Espai entre seccions 
+        margin-bottom: 5vh; // Espai entre seccions 
         
-      h2 {
-        font-family: $font-family-Comic;
-        margin-bottom: 5vh;
-        font-size: 5vh;
-      }
+        h2 {
+            font-family: $font-family-Comic;
+            margin-bottom: 5vh;
+            font-size: 5vh;
+        }
     }
     
-    
     &__videos__container { 
-      display: grid;
-      margin: 0 5%;
-      grid-template-columns: repeat(2, 1fr); // Responsive videos 
-      
+        display: grid;
+        margin: 0 5%;
+        grid-template-columns: repeat(2, 1fr); // Responsive videos 
+        
         @media (max-width: $phone) {
             grid-template-columns: 1fr;
             width: 50%;
-            margin:0 25%;
+            margin: 0 25%;
             max-width: 300px;
             
-            .home__videos__container__video{
+            .home__videos__container__video {
                 max-width: 300px;
                 max-height: 300px;
                 width: 90%;
-
             }
         }
         
-      width: 70%;
-      margin-left: auto;
-      margin-right: auto;
-      justify-content: center;
-      align-items: center;
-      gap: 10vh;
-
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 10vh;
   
-      &__video {
-        margin: 2.5vh 0;
-        iframe{
-            border-radius: 10%;
-            width: 45vh;
-            height: 35vh;
+        &__video {
+            margin: 2.5vh 0;
+            iframe {
+                border-radius: 10%;
+                width: 45vh;
+                height: 35vh;
 
-            @media (max-width: $tablet) 
-            {
-            width: 40vh;
-            height: 25vh;    
+                @media (max-width: $tablet) {
+                    width: 40vh;
+                    height: 25vh;    
+                }
             }
         }
-
-       
-      }
     }
-    &__xarxes, &__historia,&__videos {
+    
+    &__xarxes, &__historia, &__videos {
         margin: 2.5vh 0;
     }
 
-    &__xarxes{
-        
-        
-    &__llista {
+    &__xarxes {
+        &__llista {
+            display: flex; 
+            list-style: none;
+            margin: 5vh 20%;
+            justify-content: space-around;
      
-        display: flex; 
-        list-style: none;
-        margin: 5vh 20%;
-        justify-content: space-around;
-       
- 
-        @media (max-width:$phone) {
-            display: grid;
-            grid-template-columns: repeat(2, 100px);
-            gap: 5vh;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        li {
-          
-          img {
-            width: 100px;
-            height: auto;
-            max-width: 7.5vw; 
-            height: auto; 
-            transition: transform 0.2s ease;
-
-            @media (max-width:$phone) {
-              width: 500px;
-              height: auto;
+            @media (max-width: $phone) {
+                display: grid;
+                grid-template-columns: repeat(2, 100px);
+                gap: 5vh;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
             }
-          }
-  
-          &:hover img {
-            transform: scale(1.1); // Augmenta la mida al fer hover
-          }
-        }
-      }
-    }
-  }
+            
+            li {
+                img {
+                    width: 100px;
+                    height: auto;
+                    max-width: 7.5vw; 
+                    height: auto; 
+                    transition: transform 0.2s ease;
 
-  .home-imatge {
+                    @media (max-width: $phone) {
+                        width: 70px;
+                        height: auto;
+                    }
+                }
+
+                &:hover img {
+                    transform: scale(1.1); // Augmenta la mida al fer hover
+                }
+            }
+        }
+    }
+}
+
+.home-imatge {
     position: relative;
     width: auto;
     height: 80vh;
     overflow: hidden;
-  }
-  .home-imatge__image--back, .home-imatge__image--front {
+}
+
+.home-imatge__image--back, .home-imatge__image--front {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
 
-
-    
-  }
-
-  @media (max-width: 600px) {
+@media (max-width: $phone) {
     .home-imatge {
-      max-height: 30vh;
+        max-height: 30vh;
     }
+
     .home-imatge__image--back {
-      width: 100%;  
-      height: 60%;
-      animation: shrinkDisappear 6s forwards; 
-  }
-  
-  @keyframes shrinkDisappear {
-      0% {
-          height: 60%; 
-          opacity: 1;  
-      }
-      100% {
-          width: 0;
-          position: absolute;
-          height: 0;    
-          opacity: 0;  
-          display: none; 
-      }
-  }
+        width: 100%;  
+        height: 60%;
+        animation: shrinkDisappear 6s forwards; 
+    }
     
-
+    @keyframes shrinkDisappear {
+        0% {
+            height: 60%; 
+            opacity: 1;  
+        }
+        100% {
+            width: 0;
+            position: absolute;
+            height: 0;    
+            opacity: 0;  
+            display: none; 
+        }
+    }
 }
 
-.footer-logo {
-  width: 25px;  
-  height: 20px;  
-}
-
-  .home-imatge__image--back {
-    background-image: url('../images/cortinaRoja.webp');
-    z-index: 2;
-    background-size: cover;
-    background-position: center;
-  }
-  .home-imatge__image--front {
-    background-image: url('../images/portadaPrincipal.webp');
-    z-index: 2;
-    animation: reveal 3.5s forwards;
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .text__gira {
+.text__gira {
     position: absolute;
     top: 4%;
     font-size: medium;
@@ -211,82 +180,81 @@
     width: 100%;
     font-size: calc(1em + 2vh);
 
-    &__1{
-        font-size: calc( 0.4vh);
+    &__1 {
+        font-size: calc(0.4vh);
         animation: animacioArcoiris 4s infinite linear;
     }
-    &__2{
+    &__2 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 4.25s infinite linear;
     }
-    &__3{
+    &__3 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 4.5s infinite linear;
     }
-    &__4{
+    &__4 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 4.75s infinite linear;
     }
-    &__5{
+    &__5 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 5s infinite linear;
     }
-    &__6{
+    &__6 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 5.25s infinite linear;
     }
-    &__7{
+    &__7 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 5.5s infinite linear;
     }
-    &__8{
+    &__8 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 5.75s infinite linear;
     }
-    &__9{
+    &__9 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 6s infinite linear;
     }
-    &__10{
+    &__10 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 6.25s infinite linear;
     }
-    &__11{
+    &__11 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 6.5s infinite linear;
     }
-    &__12{
+    &__12 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 6.75s infinite linear;
     }
-    &__13{
+    &__13 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 7s infinite linear;
     }
-    &__14{
+    &__14 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 7.25s infinite linear;
     }
-    &__15{
+    &__15 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 7.5s infinite linear;
     }
-    &__16{
+    &__16 {
         font-size: calc(1em + 0.4vh);
         animation: animacioArcoiris 7.75s infinite linear;
     }
-  }
-
-  @keyframes reveal {
-    0% {
-      clip-path: polygon(0 0, 0 0, 0 0, 0 0);
-    }
-    100% {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-  }
-
-  .h1__home span {
-    font-size: calc(1em + 0.3vw);
 }
 
+@keyframes reveal {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+.h1__home span {
+    font-size: calc(1em + 0.3vw);
+}

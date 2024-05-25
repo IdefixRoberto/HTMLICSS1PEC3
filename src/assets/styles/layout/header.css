@@ -1,0 +1,27 @@
+.header-back {
+  background-color: #f8f8f8; }
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; }
+
+.header-logo {
+  display: block;
+  width: 100px;
+  height: auto; }
+
+.menu-icono {
+  cursor: pointer; }
+
+.navbar ul {
+  list-style-type: none;
+  display: flex; }
+  .navbar ul li {
+    margin: 0 10px; }
+    .navbar ul li .navegacio__link {
+      text-decoration: none;
+      color: #333; }
+      .navbar ul li .navegacio__link:hover {
+        color: #666; }
