@@ -5,6 +5,7 @@
 .home-imatge .text__gira .h1__home {
     font-size: calc(5.5vw );
     margin-top: 3%;
+    aspect-ratio: 3 / 2;
 }
 
 
@@ -142,12 +143,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-
+    aspect-ratio: 3 / 2;
 
     
   }
 
   @media (max-width: 600px) {
+    aspect-ratio: 3 / 2;
     .home-imatge {
       max-height: 30vh;
     }
