@@ -1,226 +1,75 @@
+// _enlaces.scss
 
-.enlaces-a {
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$font-stack: 'Comic Neue', sans-serif;
+
+// Mixins
+@mixin center-text {
+  text-align: center;
+}
+
+// General styles
+body {
+  font-family: $font-stack;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+.header-back {
+  background-color: $primary-color;
+}
+
+.header-logo {
+  width: 100px;
+}
+
+.navbar {
+  ul {
+    list-style: none;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 80%;
+    justify-content: space-around;
+  }
 
-    &__container{
-        width: 100%;
-        p {
-            line-height: 1.5rem;
-            margin: 1rem
-        }
-    }
-
+  .navegacio__link {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+  }
 }
 
-.enlaces-b {
-
-    width: 80%;
-    margin: 0 10%;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    table {
-        border: 2px solid black;
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    td {
-        border: 2px solid black;
-        border-collapse: collapse;
-        width: 20%;
-    }
-    tr:nth-child(even) {
-        background-color: #e8e8e8; // Incrementat el contrast per visibilitat millorada
-    }
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    &:nth-child(even) {
-        background-color: #f9f9f9; // Color de fons millorat per major contrast
-    }
-
-    &__container{ 
-
-        width: 400px;
-        max-width: 30vw;
-        height: 500px;
-        @media (max-width: $tablet) {
-            width: 300px;
-            height: 350px;
-        }
-
-        @media (max-width: $phone) {
-            width: 200px;
-            height: 250px;
-        }
-    &__Imatge {
-        
-            margin: 12px;
-            width: 300px;
-            max-width: 25vw;
-            height: 400px;
-            @media (max-width: $tablet) {
-                width: 250px;
-                height: 300px;
-            }
-
-            @media (max-width: $phone) {
-                width: 150px;
-                height: 200px;
-            }
-        
-    }
-} 
-    &__text {
-
-        width: 400px;
-        max-width: 30vw;
-        height: 500px;
-        @media (max-width: $tablet) {
-            width: 300px;
-            height: 350px;
-        }
-
-        @media (max-width: $phone) {
-            width: 200px;
-            height: 250px;
-        }
-        color: #000000; // Negre per a major contrast
-        p {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 1.1rem;
-            margin-left: 3vh;
-        }
-    }
+.text-center {
+  @include center-text;
 }
 
-.enlaces-c {
-    width: 80%;
-    margin: 2rem 10%;
-    .text-center {
-        justify-content: center;
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 20px;
-    }
+.enlaces-a, .enlaces-b, .enlaces-c, .enlaces-d {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid $secondary-color;
+  
+  h2 {
+    @include center-text;
+    color: $primary-color;
+  }
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-
-        .enlaces-c__llistat {
-            list-style-type: none;
-            padding-left: 0;
-
-            li {
-                background-color: #f0f0f0; 
-                margin-bottom: 15px;
-                padding: 15px;
-                border-radius: 8px;
-                border-left: 5px solid #398a3c;
-
-                a {
-                    color: #0056b3; 
-                    text-decoration: none;
-
-                    &:hover {
-                        text-decoration: underline;
-                        color: #d60087; 
-                    }
-                }
-            }
-        }
-    }
+  .enlaces-a__container, .enlaces-b__container, .enlaces-c__container, .enlaces-d__container {
+    padding: 10px;
+  }
 }
 
-.enlaces-d {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    &__paragraf {
-        margin: 1% 20%;
-        text-align: justify;
+// Responsive styles
+@media (max-width: 768px) {
+  .header-logo {
+    width: 50px;
+  }
+
+  .navbar {
+    ul {
+      flex-direction: column;
     }
-    &__container {
-      width: 33vw;
-      margin: 4vh 0;
-        &__llista {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex; // per defecte en desktop
-            justify-content: space-between;
-            @media (max-width: $tablet) { // tablet
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-
-            @media (max-width: $phone) { // telèfon
-                grid-template-columns: repeat(1, 1fr);
-                gap: 10px;
-            }
-        }
-
-        &__item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.3s ease;
-
-            &.enlaces-d__item--discord i:hover {
-                color: #7289da; // color Discord
-            }
-            &.enlaces-d__item--youtube i:hover {
-                color: #FF0000; // color YouTube
-            }
-            &.enlaces-d__item--x i:hover {
-                color: #007BFF; // color genèric blau
-            }
-            &.enlaces-d__item--instagram i:hover {
-                color: #E1306C; // color Instagram
-            }
-            &.enlaces-d__item--facebook i:hover {
-                color: #3B5998; // color Facebook
-            }
-
-            &:hover {
-                transform: scale(1.2);
-                p {
-                    transform: scale(1.2);
-                }
-            }
-
-            i {
-                font-size: 3rem; // ajustat per a que correspongui a la classe `fa-3x`
-                margin-bottom: 10px;
-            }
-
-            p {
-                margin: 0;
-            }
-        }
-    }
-}
-
-.enlaces-b__text .text__enllacos {
-    font-weight: bolder;
-    color: darkblue;
-    font-size: 1.1rem;
-    font-family: 'Times New Roman', Times, serif;
-    &:hover {
-        color: green;
-        text-decoration: underline;
-    }
+  }
 }
