@@ -1,184 +1,149 @@
 <!DOCTYPE html>
 <html lang="ca">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="description" content="Explora les categories dels productes d'Oques Grasses, una botiga especialitzada en productes frescos i locals.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../assets/styles/main.scss">
+    <link rel="stylesheet" href="../assets/styles/main.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="../assets/styles/main.min.css"></noscript>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet">
-    
-    <link rel="preload" href="../assets/images/imatgeDestacada.webp" as="image">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
     <link rel="icon" href="../assets/images/favicon.ico">
     <title>Documentacio Treballl-Oques Grasses</title>
 </head>
 <body>
-
-  <header>
-    <div class="header-back">
-        <div class="header-menu header-container">
-          <a href="../index.html"> <img   src="../assets/images/logoOquesGrasses.svg" alt="Logo Oques Grasses" class="header-logo"></a>        
-          <!-- El input es checkbox per enganyar al navegador-->
-          <input type="checkbox" id="menu-navegador" />
-            <label for="menu-navegador">
-              <!-- Utilitze bars ja que pense que es la millor opció gratuita-->
-              <i class="fa-solid fa-bars fa-3x menu-icono"></i>
-            </label>
-            <nav class="navbar">
-              <ul>
-                <li><a class="navegacio__link" href="../index.html">Portada</a></li>
-                <li><a class="navegacio__link" href="./categoria.html">Categoria</a></li>
-                <li><a class="navegacio__link" href="./detall.html">Detall</a></li>
-                <li><a class="navegacio__link" href="./presentacio.html">Presentació</a></li>
-                <li><a class="navegacio__link" href="./enlaces.html">Enllaços</a></li>
-              </ul>
-            </nav>
-
-
+    <header>
+        <div class="header-back">
+            <div class="header-menu header-container">
+                <a href="../index.html"><img loading="lazy" src="../assets/images/logoOquesGrasses.svg" alt="Logo Oques Grasses" class="header-logo"></a>        
+                <input type="checkbox" id="menu-navegador">
+                <label for="menu-navegador"><i class="fa-solid fa-bars fa-3x menu-icono"></i></label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a class="navegacio__link" href="../index.html">Portada</a></li>
+                        <li><a class="navegacio__link" href="./categoria.html">Categoria</a></li>
+                        <li><a class="navegacio__link" href="./detall.html">Detall</a></li>
+                        <li><a class="navegacio__link" href="./presentacio.html">Presentació</a></li>
+                        <li><a class="navegacio__link" href="./enlaces.html">Enllaços</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-   
-    </div>
-  </header>
-
+    </header>
     <main>
-      <h1 class="text-center">Documentació de la web</h1>
+        <h1 class="text-center">Documentació de la web</h1>
 
-      <section class="enlaces-a">
-        <h2 class="text-center">Origen dels textos</h2>
-        <div class="enlaces-a__container">
-          <p>En relació als textos, majoritariament s'han utilitzat els de la pàgina web d'Oques Grasses.</p>
-          <p>El text de la portada és integrament de la pàgina web d'Oques Grasses.</p>
-          <p>La part dels textos de cançons d'Oques Grasses, així com anècdotes de Oques Grasses, està generat per IA.</p>
-          <p>Respecte a la part de concerts de detall, la informació obtinguda és dels diferents certàmens de música; són textos extrets d'aquestes webs.</p>
-          <p>La totalitat de la informació extreta en la part de presentació és de la pàgina web d'Oques Grasses.</p>
-        </div>
-      </section>
+        <section class="enlaces-a">
+            <h2 class="text-center">Origen dels textos</h2>
+            <div class="enlaces-a__container">
+                <h2 class="enlaces-a__textos">Textos</h2>
+                <div>
+                    <p>En relació als textos, majoritariament s'han utilitzat els de la pàgina web d'oques grasses</p>
+                    <p>El text de la portada es integrament de la pàgina web d'oques grasses</p>
+                    <p>La part dels texto de cançons de Oques Grasses, aixina com Ánectodes de Oques Grasses està generat per IA</p>
+                    <p>Respecte a lapart de concerts de detall, informació obtesa es dels diferents certaments de música, son textos extrets d'aquestes webs</p>
+                    <p>La totalitat de la informació extreta en la part de presentació és de la pàgina web d'oques grasses</p>
+                </div>
+            </div>
+        </section>
 
-      <section class="enlaces-b">
-        <h2 class="text-center">Origen de les imatges</h2>
-        <div class="enlaces-b__list">
-          <div class="enlaces-b__item">
-            <img class="enlaces-b__item__image" src="../assets/images/portadaPrincipal.webp" alt="Spotify Oques Grasses">
-            <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://www.actualityfm.es" target="_blank" href="https://www.actualityfm.es/2020/08/oques-grasses-anuncian-nuevo-disco-para-2021.html">https://www.actualityfm.es</a></p>
-          </div>
-          <div class="enlaces-b__item">
-            <img class="enlaces-b__item__image" src="../assets/images/spotify-logo-png-7057.webp" alt="Spotify Oques Grasses">
-            <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://www.pexels.com" href="https://www.pexels.com/ca-es/">https://www.pexels.com/</a></p>
-          </div>
-          <div class="enlaces-b__item">
-            <img class="enlaces-b__item__image" src="../assets/images/Youtube_icon-icons.com_66802.webp" alt="Youtube Oques Grasses">
-            <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://www.pexels.com" target="_blank" href="https://www.pexels.com/ca-es/">https://www.pexels.com/</a></p>
-          </div>
-          <div class="enlaces-b__item">
-            <img class="enlaces-b__item__image" src="../assets/images/1486051940-twitersocialnetworkbrandlogo_79084.webp" alt="Twitter Oques Grasses">
-            <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://www.pexels.com" target="_blank" href="https://www.pexels.com/ca-es/">https://www.pexels.com/</a></p>
-          </div>
-          <div class="enlaces-b__item">
-            <img class="enlaces-b__item__image" src="../assets/images/amazon_music_macos_bigsur_icon_190403.webp" alt="Amazon Music Oques Grasses">
-            <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://www.pexels.com" target="_blank" href="https://www.pexels.com/ca-es/">https://www.pexels.com/</a></p>
-          </div>
-          <div class="enlaces-b__item">
-            <img class="enlaces-b__item__image" src="../assets/images/dis_1.webp" alt="Un dia no se com">
-            <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://oquesgrasses.com/musica/" target="_blank" href="https://oquesgrasses.com/musica/">https://oquesgrasses.com/musica/</a></p>
-          </div>
-          <div class="enlaces-b__item">
-            <img class="enlaces-b__item__image" src="../assets/images/disc_2.webp" alt="Continuem vius">
-            <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://oquesgrasses.com/musica/" target="_blank" href="https://oquesgrasses.com/musica/">https://oquesgrasses.com/musica/</a></p>
-          </div>
-          <div class="enlaces-b__item">
-            <img class="enlaces-b__item__image" src="../assets/images/disc_3.webp" alt="You Poni">
-            <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://oquesgrasses.com/musica/" target="_blank" href="https://oquesgrasses.com/musica/">https://oquesgrasses.com/musica/</a></p>
-          </div>
-          <div class="enlaces-b__item">
-            <img class="enlaces-b__item__image" src="../assets/images/logo.webp" alt="Logo Oques Grasses">
-            <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://oquesgrasses.com" target="_blank" href="https://oquesgrasses.com/">https://oquesgrasses.com/</a></p>
-          </div>
-          <div class="enlaces-b__item">
-            <img class="enlaces-b__item__image" src="../assets/images/Concert1.webp" alt="Concert 1">
-            <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://oquesgrasses.com" target="_blank" href="https://oquesgrasses.com/">https://oquesgrasses.com/</a></p>
-          </div>
-          <div class="enlaces-b__item">
-            <img class="enlaces-b__item__image" src="../assets/images/Concert2.webp" alt="Concert 2">
-            <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://www.elperiodico.com" target="_blank" href="https://www.elperiodico.com/es/ocio-y-cultura/20190330/oques-grasses-congrega-8000-personas-girona-7382860">El Periódico</a></p>
-          </div>
-          <div class="enlaces-b__item">
-            <img class="enlaces-b__item__image" src="../assets/images/Concert3.webp" alt="Concert 3">
-            <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://oquesgrasses.com" target="_blank" href="https://oquesgrasses.com/">https://oquesgrasses.com/</a></p>
-          </div>
-          <div class="enlaces-b__item">
-            <img class="enlaces-b__item__image" src="../assets/images/ocaTransparent.webp" alt="Concert 4">
-            <p class="enlaces-b__item__text">La Oca es un png de <a aria-label="obtes en Pinterest" href="https://www.pinterest.com/pin/download-and-share-clipart-about-resultado-de-imagen-de-dibujos-de-oca-domestic-farm-animals-clipart-goat-find-more-hi--763500943091020254/">Pinterest</a></p>
-          </div>
-        </div>
-      </section>
+        <section class="enlaces-b">
+            <h2 class="text-center">Origen de les imatges</h2>
+            <div class="enlaces-b__list">
+                <div class="enlaces-b__item">
+                    <img class="enlaces-b__item__image" src="../assets/images/portadaPrincipal.webp" alt="Spotify Oques Grasses" width="150" height="150">
+                    <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://www.actualityfm.es" target="_blank" href="https://www.actualityfm.es/2020/08/oques-grasses-anuncian-nuevo-disco-para-2021.html">https://www.actualityfm.es</a></p>
+                </div>
+                <div class="enlaces-b__item">
+                    <img class="enlaces-b__item__image" src="../assets/images/spotify-logo-png-7057.webp" alt="Spotify Oques Grasses" width="150" height="150">
+                    <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://www.pexels.com" href="https://www.pexels.com/ca-es/">https://www.pexels.com/</a></p>
+                </div>
+                <div class="enlaces-b__item">
+                    <img class="enlaces-b__item__image" src="../assets/images/Youtube_icon-icons.com_66802.webp" alt="Youtube Oques Grasses" width="150" height="150">
+                    <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://www.pexels.com" target="_blank" href="https://www.pexels.com/ca-es/">https://www.pexels.com/</a></p>
+                </div>
+                <div class="enlaces-b__item">
+                    <img class="enlaces-b__item__image" src="../assets/images/1486051940-twitersocialnetworkbrandlogo_79084.webp" alt="Twitter Oques Grasses" width="150" height="150">
+                    <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://www.pexels.com" target="_blank" href="https://www.pexels.com/ca-es/">https://www.pexels.com/</a></p>
+                </div>
+                <div class="enlaces-b__item">
+                    <img class="enlaces-b__item__image" src="../assets/images/amazon_music_macos_bigsur_icon_190403.webp" alt="Amazon Music Oques Grasses" width="150" height="150">
+                    <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://www.pexels.com" target="_blank" href="https://www.pexels.com/ca-es/">https://www.pexels.com/</a></p>
+                </div>
+                <div class="enlaces-b__item">
+                    <img class="enlaces-b__item__image" src="../assets/images/dis_1.webp" alt="Un dia no se com" width="150" height="150">
+                    <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://oquesgrasses.com/musica/" target="_blank" href="https://oquesgrasses.com/musica/">https://oquesgrasses.com/musica/</a></p>
+                </div>
+                <div class="enlaces-b__item">
+                    <img class="enlaces-b__item__image" src="../assets/images/disc_2.webp" alt="Continuem vius" width="150" height="150">
+                    <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://oquesgrasses.com/musica/" target="_blank" href="https://oquesgrasses.com/musica/">https://oquesgrasses.com/musica/</a></p>
+                </div>
+                <div class="enlaces-b__item">
+                    <img class="enlaces-b__item__image" src="../assets/images/disc_3.webp" alt="You Poni" width="150" height="150">
+                    <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://oquesgrasses.com/musica/" target="_blank" href="https://oquesgrasses.com/musica/">https://oquesgrasses.com/musica/</a></p>
+                </div>
+                <div class="enlaces-b__item">
+                    <img class="enlaces-b__item__image" src="../assets/images/logo.webp" alt="Logo Oques Grasses" width="150" height="150">
+                    <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://oquesgrasses.com" target="_blank" href="https://oquesgrasses.com/">https://oquesgrasses.com/</a></p>
+                </div>
+                <div class="enlaces-b__item">
+                    <img class="enlaces-b__item__image" src="../assets/images/Concert1.webp" alt="Concert 1" width="150" height="150">
+                    <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://oquesgrasses.com" target="_blank" href="https://oquesgrasses.com/">https://oquesgrasses.com/</a></p>
+                </div>
+                <div class="enlaces-b__item">
+                    <img class="enlaces-b__item__image" src="../assets/images/Concert2.webp" alt="Concert 2" width="150" height="150">
+                    <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://www.elperiodico.com" target="_blank" href="https://www.elperiodico.com/es/ocio-y-cultura/20190330/oques-grasses-congrega-8000-personas-girona-7382860">El Periódico</a></p>
+                </div>
+                <div class="enlaces-b__item">
+                    <img class="enlaces-b__item__image" src="../assets/images/Concert3.webp" alt="Concert 3" width="150" height="150">
+                    <p class="enlaces-b__item__text">S'ha obtes de la pàgina <a aria-label="obtes en https://oquesgrasses.com" target="_blank" href="https://oquesgrasses.com/">https://oquesgrasses.com/</a></p>
+                </div>
+                <div class="enlaces-b__item">
+                    <img class="enlaces-b__item__image" src="../assets/images/ocaTransparent.webp" alt="Concert 4" width="150" height="150">
+                    <p class="enlaces-b__item__text">La Oca es un png de <a aria-label="obtes en Pinterest" href="https://www.pinterest.com/pin/download-and-share-clipart-about-resultado-de-imagen-de-dibujos-de-oca-domestic-farm-animals-clipart-goat-find-more-hi--763500943091020254/">Pinterest</a></p>
+                </div>
+            </div>
+        </section>
 
-      <section class="enlaces-c">
-        <h2 class="text-center">Fonts utilitzades</h2>
-        <div class="container">
-          <ol class="enlaces-c__llistat">
-            <li>El disseny del loading de la pàgina de categories està basat en les tècniques descrites a <a aria-label="obtes en https://barcelonageeks.com/como-crear-un-efecto-de-bola-de-onda-usando-css/" href="https://barcelonageeks.com/como-crear-un-efecto-de-bola-de-onda-usando-css/" target="_blank">Barcelona Geeks</a>.</li>
-            <li>Per a idees de disseny i funcionalitat, he consultat recursos i tutorials a <a aria-label="obtes en https://youtube.com" href="https://www.youtube.com" target="_blank">YouTube</a>, especialment els canals dedicats al desenvolupament web com midudev.</li>
-            <li>He utilitzat Instagram per a observar les últimes tendències en disseny i interacció d'usuari.</li>
-            <li>He analitzat el disseny i l'estructura de la pàgina web <a aria-label="obtes en https://soctesther.com/" href="https://soctesther.com" target="_blank">soctesther.com</a> per entendre millor com presentar contingut de manera efectiva en una pàgina web dedicada a serveis professionals.</li>
-            <li>He revisat diverses webs d'altres artistes per a obtenir inspiració sobre com podrien ser les composicions visuals i els esquemes de navegació.</li>
-          </ol>
-        </div>
-      </section>
+        <section class="enlaces-c">
+            <h2 class="text-center">Fonts utilitzades</h2>
+            <div class="container">
+                <ol class="enlaces-c__llistat">
+                    <li>El disseny del loading de la pàgina de categories està basat en les tècniques descrites a <a aria-label="obtes en https://barcelonageeks.com/como-crear-un-efecto-de-bola-de-onda-usando-css/" href="https://barcelonageeks.com/como-crear-un-efecto-de-bola-de-onda-usando-css/" target="_blank">Barcelona Geeks</a>.</li>
+                    <li>Per a idees de disseny i funcionalitat, he consultat recursos i tutorials a <a aria-label="obtes en https://youtube.com" href="https://www.youtube.com" target="_blank">YouTube</a>, especialment els canals dedicats al desenvolupament web com midudev.</li>
+                    <li>He utilitzat Instagram per a observar les últimes tendències en disseny i interacció d'usuari.</li>
+                    <li>He analitzat el disseny i l'estructura de la pàgina web <a aria-label="obtes en https://soctesther.com/" href="https://soctesther.com" target="_blank">soctesther.com</a> per entendre millor com presentar contingut de manera efectiva en una pàgina web dedicada a serveis professionals.</li>
+                    <li>He revisat diverses webs d'altres artistes per a obtenir inspiració sobre com podrien ser les composicions visuals i els esquemes de navegació.</li>
+                </ol>
+            </div>
+        </section>
 
-      <section class="enlaces-d">
-        <h2 class="text-center">Xarxes socials utilitzades</h2>
-        <p class="enlaces-d__paragraf">
-          He fet ús de diverses fonts per a recollir idees per al desenvolupament d'aquesta pàgina web, ja que no tenia experiència prèvia en el disseny web. A més d'Internet en general, he consultat diverses xarxes socials i vídeos a YouTube per a inspirar-me i orientar el meu treball.
-        </p>
-        <div class="enlaces-d__container">
-          <ul class="enlaces-d__container__llista">
-            <li class="enlaces-d__container__item enlaces-d__item--discord">
-              <i class="fa-brands fa-discord"></i>
-              <p>Discord</p>
-            </li>
-            <li class="enlaces-d__container__item enlaces-d__item--youtube">
-              <i class="fa-brands fa-youtube"></i>
-              <p>YouTube</p>
-            </li>
-            <li class="enlaces-d__container__item enlaces-d__item--x">
-              <i class="fa-solid fa-xmark"></i>
-              <p>X</p>
-            </li>
-            <li class="enlaces-d__container__item enlaces-d__item--instagram">
-              <i class="fa-brands fa-instagram"></i>
-              <p>Instagram</p>
-            </li>
-            <li class="enlaces-d__container__item enlaces-d__item--facebook">
-              <i class="fa-brands fa-facebook"></i>
-              <p>Facebook</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-  <footer class="footer">
-    <div class="footer__container">
-      <div class="footer__info">
-        <div class="footer__info__container">
-          <a href="../index.html"> <img loading="lazy"  src="../assets/images/logoOquesGrasses.svg" alt="Logo Oques Grasses" class="header-logo"></a>        </div>
-        <nav class="footer__nav">
-          <ul>
-            <li><a class="navegacio__link" href="../index.html">Portada</a></li>
-            <li><a class="navegacio__link" href="./categoria.html">Categoria</a></li>
-            <li><a class="navegacio__link" href="./detall.html">Detall</a></li>
-            <li><a class="navegacio__link" href="./presentacio.html">Presentació</a></li>
-            <li><a class="navegacio__link" href="./enlaces.html">Enllaços</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="footer__author">
-        Copy © Salvador Peiró PEC2 HTML i CSS 1
-      </div>
-    </div>
-  </footer>
-</body>
-
-</html>
+        <section class="enlaces-d">
+            <h2 class="text-center">Xarxes socials utilitzades</h2>
+            <p class="enlaces-d__paragraf">He fet ús de diverses fonts per a recollir idees per al desenvolupament d'aquesta pàgina web, ja que no tenia experiència prèvia en el disseny web. A més d'Internet en general, he consultat diverses xarxes socials i vídeos a YouTube per a inspirar-me i orientar el meu treball.</p>
+            <div class="enlaces-d__container">
+                <ul class="enlaces-d__container__llista">
+                    <li class="enlaces-d__container__item enlaces-d__item--discord">
+                        <i class="fa-brands fa-discord fa-3x"></i>
+                        <p>Discord</p>
+                    </li>
+                    <li class="enlaces-d__container__item enlaces-d__item--youtube">
+                        <i class="fa-brands fa-youtube fa-3x"></i>
+                        <p>YouTube</p>
+                    </li>
+                    <li class="enlaces-d__container__item enlaces-d__item--x">
+                        <i class="fa-solid fa-xmark fa-3x"></i>
+                        <p>X</p>
+                    </li>
+                    <li class="enlaces-d__container__item enlaces-d__item--instagram">
+                        <i class="fa-brands fa-instagram fa-3x"></i>
+                        <p>Instagram</p>
+                    </li>
+                    <li class="enlaces-d__container__item enlaces-d__item--facebook">
+                        <i class="fa-brands fa-facebook fa-3x"></i>
+                        <p>Facebook</p>
