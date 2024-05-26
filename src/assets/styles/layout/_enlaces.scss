@@ -198,6 +198,15 @@
                 border-radius: 8px;
                 border-left: 5px solid #398a3c;
 
+                @media (max-width: $tablet) {
+                    font-size: 1rem;
+                  }
+            
+                  @media (max-width: $phone) {
+                    font-size: 0.6rem;
+                  }
+            
+
                 a {
                     color: #0056b3; 
                     text-decoration: none;
