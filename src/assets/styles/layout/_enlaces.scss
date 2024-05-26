@@ -6,7 +6,7 @@
     }
 
     @media (max-width: $phone) {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 
 }
@@ -33,7 +33,7 @@
     margin: 0 auto;
     width: 80%;
 
-    @media (max-width: $phone){
+    @media (max-width: $tablet){
         width: 90%;
     }
 
