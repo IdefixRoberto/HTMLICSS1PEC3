@@ -19,7 +19,7 @@
   }
 
   .presentacio-a__text{
-    p{
+    .presentacio-a__text__p{
       margin: 2.5vh;
       @media (max-width: $tablet) {
         font-size: 1rem;
