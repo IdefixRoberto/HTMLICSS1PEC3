@@ -123,10 +123,12 @@
             width: 300px;
             max-width: 25vw;
             height: 350px;
+            aspect-ratio: 3/2;
             @media (max-width: $tablet) {
                 width: 250px;
                 height: 300px;
                 margin: 6px;
+                aspect-ratio: 3/2;
             }
 
             @media (max-width: $phone) {
