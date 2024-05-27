@@ -32,6 +32,9 @@
     align-items: center;
     margin: 0 auto;
     width: 80%;
+    transform: translateZ(0);
+    will-change: transform;
+    font-family: 'Times New Roman', Times, serif;
 
     @media (max-width: $tablet){
         width: 95%;
@@ -53,9 +56,9 @@
             font-family: 'Times New Roman', Times, serif;
 
             @media (max-width: $phone) {
-                line-height: normal;
+                line-height: 1.5;
 
-                font-size: 0.7rem; 
+                font-size: 0.9rem; 
                 margin: 0.1rem; 
         }
     }
