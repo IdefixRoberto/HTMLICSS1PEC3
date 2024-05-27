@@ -126,7 +126,7 @@
         background-color: #f9f9f9; // Color de fons millorat per major contrast
     }
     &__Imatge {
-        img {
+        .enlaces-b__Imatge__img  {
             margin: 12px;
             width: 300px;
             max-width: 25vw;
