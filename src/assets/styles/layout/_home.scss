@@ -119,7 +119,7 @@
           
           img {
             width: 100%;
-            max-width: 7.5vw; 
+            max-width: 100px; 
             height: auto; 
             transition: transform 0.2s ease;
           }
@@ -283,3 +283,4 @@
   .h1__home span {
     font-size: calc(1em + 0.3vw);
 }
+

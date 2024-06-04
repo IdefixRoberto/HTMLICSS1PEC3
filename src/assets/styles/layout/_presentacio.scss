@@ -4,10 +4,7 @@
 @import "navegacio";
 @import "variables";
 
-.llistat-discs-imatges{
-  width: 100%;
-  height: auto;
-}
+
 .presentacio-a {
   display: grid;
   justify-content: center;
@@ -60,13 +57,13 @@
         text-decoration: none;
 
         img {
-          width: 100%;
+          width: 300px;
           max-width: 27vw;
           height: auto;
 
           @media (max-width: $tablet) {
-            max-width: 80vw;
-            max-height: 50vh;
+            max-width: 60vw;
+            
           }
 
 
@@ -156,7 +153,7 @@
       grid-template-columns: repeat(2, 1fr); // 2 caixes en vista de tablet
     }
 
-    @media (max-width: $phone) {
+    @media (max-width: 800px) {
       grid-template-columns: 1fr; // 1 caixa en vista de mòbil
     }
 
@@ -175,6 +172,15 @@
         img {
           width: 100%;
           height: auto;
+
+          @media (max-width: $tablet) {
+            background-color: rgb(167, 167, 167); // Fons més clar per a millor visibilitat
+            &__imatge, &__continguts {
+              
+            }
+          }
+
+
         }
       }
 
