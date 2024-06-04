@@ -51,6 +51,7 @@
     .enlaces-a {
         width: 95%;
         margin: 5% 2.5%;
+        font-size: 0.8;
     }
 }
 
@@ -90,7 +91,7 @@
 
 @media (max-width: 480px) {
     .enlaces-b {
-        min-width: 90vw;
+        width: 90vw;
     }
 }
 
@@ -98,12 +99,13 @@
     border: 2px solid black;
     border-collapse: collapse;
     width: 100%;
-    min-width: 580px;
+    max-width: 580px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 748px) {
     .enlaces-b table {
-        min-width: 90vw;
+        width: 90%;
+        min-width: none;
     }
 }
 
